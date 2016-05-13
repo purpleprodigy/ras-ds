@@ -9,10 +9,11 @@ tests/mocks/env/
 .sass-cache/
 
 # Development files
-/node_modules
-/themes/ras-ds/assets/vendor/
-/themes/ras-ds/config
-/themes/ras-ds/gulpfile.js
-/themes/ras-ds/package.json
+themes/ras-ds/node_modules
+themes/ras-ds/assets/vendor/
+themes/ras-ds/assets/gulp/
+themes/ras-ds/config
+themes/ras-ds/gulpfile.js
+themes/ras-ds/package.json
 
 .idea/
