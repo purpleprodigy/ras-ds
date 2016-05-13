@@ -1,0 +1,41 @@
+{
+    "name" 			: "sydneyuni/ras-ds-child-theme",
+    "description" 	: "RAS-DS Genesis Child Theme",
+    "type"          : "project",
+    "keywords" 		: ["wordpress", "wp", "theme"],
+    "homepage" 		: "http://sydneyuni.dev",
+    "license" 		: "GPL-2.0+",
+    "authors": [
+        {
+            "name" 	: "Rose Cox",
+            "email" : "rose@purpleprodigy.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0"
+    },
+    "require-dev": {},
+    "autoload" : {
+        "files": [
+            "lib/setup.php",
+
+            "lib/widgets/widget-areas.php",
+
+            "lib/structure/footer.php",
+            "lib/structure/header.php",
+            "lib/structure/nav.php",
+
+            "lib/functions/enqueue-assets.php",
+            "lib/functions/helpers.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "vendor-dir": "assets/vendor"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,44 @@
+/* -----------------------------------
+home
+----------------------------------- */
+
+.home-intro {
+	font-size: 29px;
+	font-family: $font-special;
+	color: $white;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.home-subheadings {
+	font-size: 20px;
+	font-family: $font-quote;
+	font-style: italic;
+	color: $gray-light;
+	font-weight: normal;
+	margin: 0 0 .7em;
+}
+
+.home-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: 0 0 0 20px;
+		margin: 0 0 .7em;
+		background: url(../img/bg-bullet.png) no-repeat 0 .3em;
+	}
+}
+
+
+// wide screen
+
+@media screen and (min-width: 930px)
+{
+	.home-buttons {
+		position: absolute;
+		width: 100%;
+	}
+
+}

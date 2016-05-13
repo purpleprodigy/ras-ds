@@ -1,0 +1,16 @@
+/* -----------------------------------
+lists
+----------------------------------- */
+
+.bullet {
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: 0 0 0 20px;
+		margin: 0 0 .7em;
+		background: url(../img/bg-bullet.png) no-repeat 0 .3em;
+	}
+}
+

@@ -1,0 +1,160 @@
+/* -----------------------------------
+buttons
+----------------------------------- */
+
+.btn,
+.gform_next_button,
+.gform_button,
+.gform_previous_button,
+.gform_save_link {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	font-family: $font-special;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+// btn-primary
+
+.btn-primary,
+.gform_button,
+.gform_next_button {
+	@extend .btn;
+	color: #fff !important;
+	background-color: $red;
+	border-color: $red;
+}
+
+.btn-primary:focus,
+.gform_button:focus,
+.gform_next_button:focus,
+.btn-primary:active:focus,
+.gform_button:active:focus,
+.gform_next_button:active:focus {
+	background: $black;
+	border-color: $black;
+	text-decoration: none;
+}
+
+.btn-primary:hover,
+.gform_button:hover,
+.gform_next_button:hover {
+	background: darken($red, 10%);
+	border-color: darken($red, 10%);
+	text-decoration: none;
+}
+
+.btn-primary:active,
+.gform_button:active,
+.gform_next_button:active,
+.btn-primary:active:hover,
+.gform_button:active:hover,
+.gform_next_button:active:hover {
+	background: darken($red, 20%);
+	border-color: darken($red, 20%);
+	text-decoration: none;
+}
+
+
+// btn-default
+
+.btn-default,
+.gform_previous_button,
+.gform_save_link {
+	@extend .btn;
+	color: $red;
+	background-color: #fff;
+	border-color: #ccc;
+	box-shadow: none !important;
+	text-decoration: none;
+}
+
+.btn-default:visited,
+.gform_previous_button:visited,
+.gform_save_link:visited,
+.btn-default:visited:focus,
+.gform_previous_button:visited:focus,
+.gform_save_link:visited:focus {
+	color: $red;
+	text-decoration: none;
+}
+
+.btn-default:focus,
+.gform_previous_button:focus,
+.gform_save_link:focus,
+.btn-default:active:focus,
+.gform_previous_button:active:focus,
+.gform_save_link:active:focus {
+	color: $white;
+	background: $black;
+	border-color: $black;
+	text-decoration: none;
+}
+
+.btn-default:hover,
+.gform_previous_button:hover,
+.gform_save_link:hover {
+	color: $white;
+	background: darken($red, 10%);
+	border-color: darken($red, 10%);
+	text-decoration: none;
+}
+
+.btn-default:active,
+.gform_previous_button:active,
+.gform_save_link:active,
+.btn-default:active:hover,
+.gform_previous_button:active:hover,
+.gform_save_link:active:hover {
+	color: $white;
+	background: darken($red, 20%);
+	border-color: darken($red, 20%);
+	text-decoration: none;
+}
+
+.gform_previous_button {
+	float: left;
+}
+
+.gform_next_button,
+.gform_button {
+	float: right;
+}
+
+.gform_save_link {
+	float: right;
+	margin-right: 10px;
+}
+
+// shadow
+
+.btn-shadow {
+	box-shadow: 0 3px 3px rgba(0,0,0,.2);
+}
+
+
+// italic
+
+.btn-italic {
+	font-size: 18px;
+	font-family: $font-quote;
+	font-style: italic;
+	font-weight: normal;
+}

@@ -1,0 +1,51 @@
+/* -----------------------------------
+tables
+----------------------------------- */
+
+.table-border,
+.table-border td,
+.table-border th {
+	border: 1px solid #ddd;
+}
+
+.table-border tbody th {
+	font-weight: normal;
+}
+
+
+//
+
+.gv-datatables {
+	margin: .2em 0 .5em;
+	width: 100% !important;
+}
+
+.gv-datatables td,
+.gv-datatables th {
+	padding: 7px 0;
+}
+
+.gv-datatables thead,
+.gv-datatables tfoot {
+	display: none;
+}
+
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+	font-size: 87.5%;
+}
+
+.dataTables_paginate {
+	margin-bottom: 2em;
+}
+
+.gv-widgets-header h3 { margin: 0 0 1em; }
+
+.gv-datatables a {
+	padding: 0 0 0 20px;
+	background: url(../img/bg-file.png) no-repeat;
+}
+
+.paginate_button.previous { margin-right: 2em; }
+.paginate_button.current { margin-right: 2em; }

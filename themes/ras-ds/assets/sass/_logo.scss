@@ -1,0 +1,26 @@
+/* -----------------------------------
+logo
+----------------------------------- */
+
+.logo-main {
+	color: $red;
+	font-size: 36px;
+	font-weight: 800;
+}
+
+.logo-secondary {
+	color: $gray-light;
+	font-family: $font-quote;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.logo-small {
+	color: $gray-light;
+	font-family: $font-special;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 2px 0 0;
+}

@@ -1,0 +1,20 @@
+/*
+	Theme Name: RAS-DS
+	Theme URL: http://www.purpleprodigy.com
+	Description: Child theme created for the Genesis Framework.
+	Author: Rose Cox
+	Author URI: http://www.purpleprodigy.com
+	Version: 1.0.0
+
+	Template: genesis
+    License: GPL-2.0+
+    License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+.gform_wrapper .gform_page_footer {
+    border-top: none!important;
+}
+
+#gform_page_1_1 #gform_save_1_link {
+    display: none!important;
+}

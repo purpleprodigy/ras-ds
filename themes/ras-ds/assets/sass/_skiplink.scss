@@ -1,0 +1,26 @@
+/* -----------------------------------
+skip link
+----------------------------------- */
+
+a.skiplink
+{
+	position: absolute;
+	left: -1000px;
+	z-index: 2;
+	margin: 0;
+	padding: .5em;
+	background: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.skiplink:active,
+a.skiplink:focus,
+a.skiplink:hover
+{
+	display: inline;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: #000;
+}

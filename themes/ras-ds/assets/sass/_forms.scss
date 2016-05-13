@@ -1,0 +1,110 @@
+/* -----------------------------------
+forms
+----------------------------------- */
+
+.gform_body ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.form-heading {
+	clear: both;
+	font-size: 225.00%;
+	font-family: $font-special;
+	font-weight: 800;
+	margin: 0 0 20px;
+}
+
+.rasds-title input { width: 100%; }
+
+.rasds-questions > .gfield_label {
+	clear: left;
+	float: left;
+	border: 1px solid #ddd;
+	padding: $form-padding;
+	width: $form-width1;
+	height: $form-height1;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.gfield_radio li {
+	float: left;
+	border: 1px solid #ddd;
+	border-left: 0;
+	padding: $form-padding;
+	width: $form-width2;
+	text-align: center;
+	height: $form-height1;
+}
+
+.gfield_radio li:nth-child(4) {
+	width: $form-width3;
+}
+
+.rasds-comment {
+	float: left;
+	width: $form-width4;
+	padding: $form-padding;
+	height: $form-height1;
+	border: 1px solid #ddd;
+	border-left: 0;
+}
+
+.rasds-comment input {
+	width: 100%;
+}
+
+.gfield_radio li label,
+.rasds-comment label {
+	position: absolute;
+	left: -500em;
+}
+.gfield_required { color: $red; }
+
+.gform_page_footer {
+	clear: both;
+	padding-top: 20px;
+}
+
+.rasds-headings {
+	clear: both;
+	font-weight: bold;
+}
+
+.rasds-heading1 {
+	clear: left;
+	float: left;
+	border: 1px solid #ddd;
+	padding: $form-padding;
+	width: $form-width1;
+	height: 60px;
+}
+
+.rasds-heading2 {
+	float: left;
+	border: 1px solid #ddd;
+	border-left: 0;
+	padding: $form-padding;
+	width: $form-width2;
+	height: $form-height2;
+}
+
+.rasds-heading5 {
+	float: left;
+	border: 1px solid #ddd;
+	border-left: 0;
+	padding: $form-padding;
+	width: $form-width3;
+	height: $form-height2;
+}
+
+.rasds-heading6 {
+	float: left;
+	border: 1px solid #ddd;
+	border-left: 0;
+	padding: $form-padding;
+	width: $form-width4;
+	height: $form-height2;
+}

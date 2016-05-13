@@ -1,0 +1,61 @@
+/* -----------------------------------
+base
+----------------------------------- */
+
+html, body {
+	font-size: 16px;
+}
+
+body {
+	padding-bottom: 30px;
+	margin: 0;
+	padding: 0 0 30px;
+	color: #555;
+	font-family: $font-general;
+	line-height: 1.2;
+}
+
+label {
+	font-weight: normal !important;
+}
+
+textarea {
+	height: 2.5em !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-special;
+	font-weight: 800;
+}
+
+h3,h4,h5,h6 {
+	font-weight: 700;
+}
+
+blockquote {
+	margin: 0 0 1em 0;
+	padding: 1em;
+	border: 0;
+	background: #eee;
+}
+
+p,
+li {
+	line-height: 1.4;
+}
+
+
+// links
+
+a:link { color: darken($olive, 2%); }
+a:visited { color: darken($olive, 10%); }
+a:focus { color: $black; }
+a:hover { color: darken($olive, 15%); }
+a:active { color: darken($olive, 20%); }
+
+a:link { color: $red; }
+a:visited { color: darken($red, 10%); }
+a:focus { color: $black; }
+a:hover { color: darken($red, 15%); }
+a:active { color: darken($red, 20%); }
+
