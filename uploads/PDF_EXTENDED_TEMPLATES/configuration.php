@@ -31,7 +31,7 @@ $gf_pdf_default_configuration = array(
  */
 	$gf_pdf_config[] = array(
 		'form_id'  => 1,
-		'template' => 'default-template.php',
+		'template' => 'ras-ds-online-custom-template.php',
 		'default-show-html' => true,
 		'save' => true,
 		'filename' => '{entry_id}-{Name:1}.pdf',
