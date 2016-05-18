@@ -588,3 +588,13 @@ Number of fonts 4
 Peak Memory usage 57.75 MB
 PDF file size 9 kB
 Number of fonts 4
+2016-05-18 03:29:45 Generated in 1.48 seconds
+2016-05-18 03:29:45 Compiled in 1.52 seconds (total)
+Peak Memory usage 58.00 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-05-18 03:29:47 Generated in 1.99 seconds
+2016-05-18 03:29:47 Compiled in 2.01 seconds (total)
+Peak Memory usage 57.75 MB
+PDF file size 9 kB
+Number of fonts 4
