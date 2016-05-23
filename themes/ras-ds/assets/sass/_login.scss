@@ -7,7 +7,7 @@ login
 	color: $white;
 }
 
-.login-description, .gform_login_widget p {
+.login-description {
 	display: inline-block;
 	margin-right: 10px;
 }
@@ -17,17 +17,7 @@ login
 	margin-right: 10px;
 }
 
-a.login-logout, .gform_login_widget a {
+a.login-logout {
 	color: $white;
-	text-decoration: underline;
-}
-
-.gform_login_widget p {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.gform_login_widget a {
-	color: #FFF;
 	text-decoration: underline;
 }
