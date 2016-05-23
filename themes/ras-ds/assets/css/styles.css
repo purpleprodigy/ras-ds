@@ -13,7 +13,9 @@ body {
   padding: 0 0 30px;
   color: #555;
   font-family: helvetica, arial, sans-serif;
-  line-height: 1.2; }
+  line-height: 1.2;
+  background: lime;
+}
 
 label {
   font-weight: normal !important; }
