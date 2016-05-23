@@ -49,7 +49,7 @@ nav
 	border-bottom: 1px solid $red;
 }
 
-.current-menu-item a {
+.nav .current-menu-item a {
 	border-bottom: 1px solid $red;
 	font-weight: 700;
 }
@@ -76,7 +76,7 @@ a.mobile_handle,a.down {
 }
 
 a.mobile_handle {
-	background-image: url(../img/icon-plus.png); 
+	background-image: url(../img/icon-plus.png);
 }
 
 a.down {

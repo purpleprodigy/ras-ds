@@ -257,7 +257,8 @@ forms
 .ginput_container_radio,
 .gfield_radio,
 .rasds-questions {
-  display: inline !important; }
+  display: block !important;
+  position: relative; }
 
 .gform_wrapper ul li.gfield {
   clear: none !important; }
@@ -535,6 +536,28 @@ body .gform_wrapper label.gfield_label + div.ginput_container {
 .gform_wrapper h2,
 .gform_wrapper h3 {
   font-weight: 800 !important; }
+
+.gform_wrapper div.validation_error {
+  color: #CE3D20 !important;
+  background: #f9dfda;
+  font-size: 1em !important;
+  margin-bottom: 1.6em;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  padding: 1em !important;
+  clear: both;
+  width: 100% !important; }
+
+.gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .top_label .gfield_description.validation_message {
+  color: #CE3D20 !important;
+  margin: 0 !important;
+  background: #f9dfda;
+  width: 100%; }
+
+#gform_1 .gfield_description.validation_message,
+#gform_1 .top_label .gfield_description.validation_message {
+  padding: 1em !important; }
 
 /* -----------------------------------
 colors

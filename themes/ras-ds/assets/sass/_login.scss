@@ -7,9 +7,10 @@ login
 	color: $white;
 }
 
-.login-description {
+.login-description,
+.login p {
 	display: inline-block;
-	margin-right: 10px;
+	margin: 0 10px 0 0;
 }
 
 .login-username {
@@ -17,7 +18,7 @@ login
 	margin-right: 10px;
 }
 
-a.login-logout {
+.login a {
 	color: $white;
 	text-decoration: underline;
 }
