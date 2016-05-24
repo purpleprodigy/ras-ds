@@ -30,3 +30,8 @@ function enable_login_with_email( $user, $email_or_username, $password ) {
 	return wp_authenticate_username_password( null, $user->user_login, $password );
 }
 
+// Change Gravity Forms validation message
+add_filter( 'gform_validation_message', __NAMESPACE__ . '\change_gravity_forms_validation_message', 10, 2 );
+function change_gravity_forms_validation_message( $message, $form ) {
+	return "<div class='validation_error'>There was a problem with your submission. Errors have been highlighted below in RED " . '</div>';
+}
