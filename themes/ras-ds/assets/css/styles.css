@@ -550,14 +550,28 @@ body .gform_wrapper label.gfield_label + div.ginput_container {
 
 .gform_wrapper .gfield_description.validation_message,
 .gform_wrapper .top_label .gfield_description.validation_message {
-  color: #CE3D20 !important;
-  margin: 0 !important;
-  background: #f9dfda;
-  width: 100%; }
+  position: absolute;
+  left: -500em; }
 
 #gform_1 .gfield_description.validation_message,
 #gform_1 .top_label .gfield_description.validation_message {
   padding: 1em !important; }
+
+#gform_1 li.gfield.gfield_error.gfield_contains_required {
+  margin-top: 0;
+  margin-bottom: 0 !important; }
+
+#gform_1 li.gfield.gfield_error,
+#gform_1 i.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0; }
+
+.gform_wrapper .gfield_error .gfield_label {
+  color: #CE3D20 !important;
+  font-weight: bold !important; }
 
 /* -----------------------------------
 colors
