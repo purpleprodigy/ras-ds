@@ -13,9 +13,7 @@ body {
   padding: 0 0 30px;
   color: #555;
   font-family: helvetica, arial, sans-serif;
-  line-height: 1.2;
-  background: lime;
-}
+  line-height: 1.2; }
 
 label {
   font-weight: normal !important; }
@@ -256,6 +254,15 @@ forms
   font-weight: 800;
   margin: 0 0 20px; }
 
+.ginput_container_radio,
+.gfield_radio,
+.rasds-questions {
+  display: block !important;
+  position: relative; }
+
+.gform_wrapper ul li.gfield {
+  clear: none !important; }
+
 .rasds-title input {
   width: 100%; }
 
@@ -264,7 +271,7 @@ forms
   float: left;
   border: 1px solid #ddd;
   padding: 10px;
-  width: 300px;
+  width: 290px;
   height: 80px;
   margin: 0;
   line-height: 1.2; }
@@ -278,12 +285,48 @@ forms
   text-align: center;
   height: 80px; }
 
+.gform_wrapper .gfield_checkbox li,
+.gform_wrapper .gfield_radio li {
+  margin: 0 !important;
+  line-height: 1 !important; }
+
+.ginput_container input {
+  height: auto !important;
+  font-size: 16px !important;
+  line-height: 1 !important; }
+
+.gform_page {
+  clear: both; }
+
+.gform_wrapper .gform_page_footer {
+  margin: 0 !important;
+  width: 100% !important;
+  border-top: 0 !important;
+  clear: both; }
+
+#gform_wrapper_1 ul.gfield_checkbox li,
+#gform_wrapper_1 ul.gfield_radio li {
+  padding: 10px !important; }
+
+gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio],
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+  margin-left: 0 !important;
+  line-height: 1 !important; }
+
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+  margin-top: 0 !important;
+  line-height: 1 !important; }
+
 .gfield_radio li:nth-child(4) {
   width: 120px; }
 
 .rasds-comment {
   float: left;
-  width: 240px;
+  width: 220px;
   padding: 10px;
   height: 80px;
   border: 1px solid #ddd;
@@ -296,6 +339,23 @@ forms
 .rasds-comment label {
   position: absolute;
   left: -500em; }
+
+#gform_wrapper_1 ul#input_1_106 li,
+#gform_wrapper_1 ul#input_1_107 li {
+  float: none;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0 0 2px 2px !important;
+  border: 0;
+  text-align: left; }
+
+#input_1_106 li label,
+#input_1_107 li label {
+  display: block;
+  position: relative;
+  left: 0;
+  top: -3px; }
 
 .gfield_required {
   color: #CE3D20; }
@@ -313,7 +373,7 @@ forms
   float: left;
   border: 1px solid #ddd;
   padding: 10px;
-  width: 300px;
+  width: 290px;
   height: 60px; }
 
 .rasds-heading2 {
@@ -337,12 +397,13 @@ forms
   border: 1px solid #ddd;
   border-left: 0;
   padding: 10px;
-  width: 240px;
+  width: 220px;
   height: 60px; }
 
 .gform_title {
-  font-size: 162.50%;
-  margin: 0 0 1em; }
+  font-size: 162.50% !important;
+  margin: 0 0 1em !important;
+  line-height: 1.1 !important; }
 
 .gfield {
   clear: both;
@@ -356,7 +417,8 @@ forms
   width: 100%;
   height: auto;
   padding: 0;
-  font-size: 16px;
+  margin: 0 0 1.5em;
+  font-size: 16px !important;
   line-height: auto;
   color: #555;
   background-color: #fff;
@@ -364,8 +426,7 @@ forms
   border: 0;
   border-radius: 0;
   -webkit-box-shadow: 0 0 #fff;
-  box-shadow: 0 0 #fff;
-  margin: 0 0 1.5em; }
+  box-shadow: 0 0 #fff; }
 
 .ginput_container input {
   display: block;
@@ -385,14 +446,132 @@ forms
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
 
+.gform_wrapper br,
 .gform_body br {
-  content: "A" !important;
+  content: "" !important;
   height: 1px;
   display: block !important;
-  margin-bottom: 0 !important; }
+  margin: 0 !important; }
+
+.gform_anchor {
+  height: 0; }
+
+.partial_entry_warning {
+  margin: 0 !important; }
 
 .gfield_required {
   display: none; }
+
+.gform_wrapper {
+  margin: 0 0 1em !important;
+  max-width: 100% !important; }
+
+.gform_wrapper input.medium,
+.gform_wrapper select.medium {
+  width: 100% !important; }
+
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=email],
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=number],
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=password],
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=tel],
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=text],
+.gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=url],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=email],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=number],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=password],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=tel],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=text],
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=url],
+.gform_wrapper .ginput_complex input[type=email],
+.gform_wrapper .ginput_complex input[type=number],
+.gform_wrapper .ginput_complex input[type=password],
+.gform_wrapper .ginput_complex input[type=tel],
+.gform_wrapper .ginput_complex input[type=text],
+.gform_wrapper .ginput_complex input[type=url] {
+  width: 100% !important; }
+
+.gform_wrapper .ginput_complex .ginput_left,
+.gform_wrapper .ginput_complex .ginput_right {
+  width: 100% !important; }
+
+.gform_wrapper .hidden_label input.large,
+.gform_wrapper .hidden_label select.large,
+.gform_wrapper .top_label input.large,
+.gform_wrapper .top_label select.large {
+  width: 100% !important; }
+
+.gform_wrapper .ginput_complex .ginput_right {
+  margin-left: 0 !important; }
+
+.gform_wrapper .top_label .gfield_label {
+  margin: 0 0 5px !important; }
+
+.gform_wrapper .gfield_date_day label,
+.gform_wrapper .gfield_date_month label,
+.gform_wrapper .gfield_date_year label,
+.gform_wrapper .gfield_time_ampm label,
+.gform_wrapper .gfield_time_hour label,
+.gform_wrapper .gfield_time_minute label,
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .instruction {
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+  margin: 0 0 5px !important; }
+
+body .gform_wrapper label.gfield_label + div.ginput_container {
+  margin-top: 0 !important; }
+
+.gform_wrapper .gform_footer {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+#field_2_3 .gfield_label {
+  display: none; }
+
+#gform_submit_button_2,
+#gform_submit_button_6 {
+  float: none; }
+
+.gform_wrapper h1,
+.gform_wrapper h2,
+.gform_wrapper h3 {
+  font-weight: 800 !important; }
+
+.gform_wrapper div.validation_error {
+  color: #CE3D20 !important;
+  background: #f9dfda;
+  font-size: 1em !important;
+  margin-bottom: 1.6em;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  padding: 1em !important;
+  clear: both;
+  width: 100% !important; }
+
+.gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .top_label .gfield_description.validation_message {
+  position: absolute;
+  left: -500em; }
+
+#gform_1 .gfield_description.validation_message,
+#gform_1 .top_label .gfield_description.validation_message {
+  padding: 1em !important; }
+
+#gform_1 li.gfield.gfield_error.gfield_contains_required {
+  margin-top: 0;
+  margin-bottom: 0 !important; }
+
+#gform_1 li.gfield.gfield_error,
+#gform_1 i.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0; }
+
+.gform_wrapper .gfield_error .gfield_label {
+  color: #CE3D20 !important;
+  font-weight: bold !important; }
 
 /* -----------------------------------
 colors
@@ -955,15 +1134,16 @@ login
   padding: 4px 0;
   color: #fff; }
 
-.login-description {
+.login-description,
+.login p {
   display: inline-block;
-  margin-right: 10px; }
+  margin: 0 10px 0 0; }
 
 .login-username {
   display: inline-block;
   margin-right: 10px; }
 
-a.login-logout {
+.login a {
   color: #fff;
   text-decoration: underline; }
 
@@ -1032,7 +1212,7 @@ nav
   text-decoration: none;
   border-bottom: 1px solid #CE3D20; }
 
-.current-menu-item a {
+.nav .current-menu-item a {
   border-bottom: 1px solid #CE3D20;
   font-weight: 700; }
 
