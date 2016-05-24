@@ -573,6 +573,29 @@ body .gform_wrapper label.gfield_label + div.ginput_container {
   color: #CE3D20 !important;
   font-weight: bold !important; }
 
+#gform_6 li.gfield.gfield_error.gfield_contains_required {
+  margin-top: 0; }
+
+#gform_6 li.gfield.gfield_error,
+#gform_6 li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 0; }
+
+#gform_6 .top_label .gfield_error {
+  width: 100%; }
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required fieldset legend.gfield_label,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+  margin-left: 0 !important; }
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield_html {
+  max-width: 100% !important; }
+
 /* -----------------------------------
 colors
 ----------------------------------- */
