@@ -19,10 +19,12 @@
 
 							if ( ! empty( $entries_list ) && 1 < count( $entries_list ) ) {
 
+								$latest_entry_id = count( $entries_list) - 1;
+								$right_before_latest_entry_id = $latest_entry_id - 1;
 								?>
 
 								<div class="mar-b-2">
-									<a href="<?php echo "{$entries_list[0]['value']}&rasdscompare={$entries_list[1]['id']}" ?>"
+									<a href="<?php echo "{$entries_list[$latest_entry_id]['value']}&rasdscompare={$entries_list[$right_before_latest_entry_id]['id']}" ?>"
 									   class="btn btn-primary btn-block">Compare Last Two Completed RAS-DS results</a>
 								</div>
 								<div class="mar-b-2">
