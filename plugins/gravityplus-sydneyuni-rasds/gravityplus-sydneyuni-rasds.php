@@ -692,6 +692,14 @@ class GFP_SydneyUni_RASDS {
 
 				$segment2 = GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
 
+				if ( $segment1 == $segment2 ){
+
+					$segment1 = $entry['date_created'];
+
+					$segment2 = $second_entry['date_created'];
+					
+				}
+
 				$data['segments'] = array( $segment1, $segment2 );
 
 				$data['results'] = array(
