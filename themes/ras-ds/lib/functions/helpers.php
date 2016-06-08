@@ -32,7 +32,7 @@ function enable_login_with_email( $user, $email_or_username, $password ) {
 
 // Change Gravity Forms validation message for test form
 add_filter( 'gform_validation_message_1', __NAMESPACE__ . '\change_gravity_forms_validation_message_test_form', 10, 2 );
-function change_gravity_forms_validation_message( $message, $form ) {
+function change_gravity_forms_validation_message_test_form( $message, $form ) {
 	return "<div class='validation_error'>To get your results, all statements must be scored. Statements that have not been scored are highlighted below in red." . '</div>';
 }
 
