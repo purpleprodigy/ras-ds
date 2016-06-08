@@ -3,55 +3,55 @@ nav
 ----------------------------------- */
 
 .row-nav {
-	background: $gray url(../img/bg-nav.png) repeat-x 0 100%;
+  background: $gray url(../img/bg-nav.png) repeat-x 0 100%;
 }
 
 .nav {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-size: 15px;
-	font-family: $font-special;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  font-family: $font-special;
 }
 
 .nav li {
-	margin: 0;
-	padding: 0;
-	line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .nav a {
-	display: block;
-	padding: .7em 1rem;
-	border-bottom: 1px solid $olive;
-	color: #fff;
+  display: block;
+  padding: .7em 1rem;
+  border-bottom: 1px solid $olive;
+  color: #fff;
 }
 
 .nav a:focus {
-	background-color: $black;
-	text-decoration: none;
-	border-bottom: 1px solid $red;
+  background-color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid $red;
 }
 
 .nav a:hover {
-	background-color: darken($gray, 10%);
-	text-decoration: none;
-	border-bottom: 1px solid $red;
+  background-color: darken($gray, 10%);
+  text-decoration: none;
+  border-bottom: 1px solid $red;
 }
 
 .nav a:active {
-	background-color: darken($red, 20%);
-	text-decoration: none;
-	border-bottom: 1px solid $red;
+  background-color: darken($red, 20%);
+  text-decoration: none;
+  border-bottom: 1px solid $red;
 }
 
 .nav .current-menu-item a {
-	border-bottom: 1px solid $red;
-	font-weight: 700;
+  border-bottom: 1px solid $red;
+  font-weight: 700;
 }
 
 // to remove
@@ -63,24 +63,24 @@ nav
 .workbooks .nav a.five,
 .manual .nav a.six,
 .contact .nav a.seven {
-	border-bottom: 1px solid $red;
-	font-weight: 700;
+  border-bottom: 1px solid $red;
+  font-weight: 700;
 }
 
 a.mobile_handle,a.down {
-	padding: .7em 1.8em .7em 2.2em;
-	background-image: url(../img/icon-plus.png);
-	background-repeat: no-repeat;
-	background-position: 15px 50%;
-	font-weight: bold;
+  padding: .7em 1.8em .7em 2.2em;
+  background-image: url(../img/icon-plus.png);
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
+  font-weight: bold;
 }
 
 a.mobile_handle {
-	background-image: url(../img/icon-plus.png);
+  background-image: url(../img/icon-plus.png);
 }
 
 a.down {
-	background-image: url(../img/icon-minus.png);
+  background-image: url(../img/icon-minus.png);
 }
 
 
@@ -88,30 +88,30 @@ a.down {
 
 @media screen and (min-width: 930px)
 {
-	.nav a {
-		float: left;
-		margin: 0;
-		padding: .7rem 1rem;
-		color: $white;
-		border-bottom: 5px solid $olive;
-	}
+  .nav a {
+    float: left;
+    margin: 0;
+    padding: .7rem 1rem;
+    color: $white;
+    border-bottom: 5px solid $olive;
+  }
 
-	a.mobile_handle {
-		display: none;
-	}
+  a.mobile_handle {
+    display: none;
+  }
 
-	.nav a:focus,
-	.nav a:hover,
-	.nav a:active,
-	.current-menu-item a,
-	.home .nav a.one,
-	.about .nav a.two,
-	.rasds .nav a.three,
-	.download .nav a.four,
-	.workbooks .nav a.five,
-	.manual .nav a.six,
-	.contact .nav a.seven {
-		border-width: 5px;
-	}
+  .nav a:focus,
+  .nav a:hover,
+  .nav a:active,
+  .current-menu-item a,
+  .home .nav a.one,
+  .about .nav a.two,
+  .rasds .nav a.three,
+  .download .nav a.four,
+  .workbooks .nav a.five,
+  .manual .nav a.six,
+  .contact .nav a.seven {
+    border-width: 5px;
+  }
 
 }
