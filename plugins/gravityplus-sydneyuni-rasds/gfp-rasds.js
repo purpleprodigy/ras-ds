@@ -54,6 +54,29 @@ var GFP_RASDS_Bar = {
 
         var location = document.getElementById(this.location);
 
+        var view = new google.visualization.DataView(data_table);
+
+        if (true == this.options.segmented) {
+
+            view.setColumns([0, 1,
+                {
+                    calc: function ( data_table, rowNum ) { return ( data_table.getValue(rowNum, 1) * 100 ) + '%'},
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2,
+                {
+                    calc: function ( data_table, rowNum ) { return ( data_table.getValue(rowNum, 2) * 100 ) + '%'},
+                    sourceColumn: 2,
+                    type: "string",
+                    role: "annotation"
+                }]);
+
+        }
+
+        delete this.options.segmented;
+
         if ('horizontal' == this.options.bars) {
 
             var chart = new google.visualization.BarChart(location);
@@ -65,7 +88,7 @@ var GFP_RASDS_Bar = {
 
         }
 
-        chart.draw(data_table, this.options);
+        chart.draw(view, this.options);
 
         jQuery('#' + this.location).show();
 

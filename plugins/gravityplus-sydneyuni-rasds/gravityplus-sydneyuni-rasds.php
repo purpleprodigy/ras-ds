@@ -688,17 +688,9 @@ class GFP_SydneyUni_RASDS {
 
 				$second_entry = GFAPI::get_entry( $second_entry_id );
 
-				$segment1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
+				$segment1 = "Test 1: " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
 
-				$segment2 = GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
-
-				if ( $segment1 == $segment2 ){
-
-					$segment1 = $entry['date_created'];
-
-					$segment2 = $second_entry['date_created'];
-					
-				}
+				$segment2 = "Test 2: " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
 
 				$data['segments'] = array( $segment1, $segment2 );
 
@@ -735,7 +727,9 @@ class GFP_SydneyUni_RASDS {
 				'height'  => 500,
 				'legend'  => array( 'position' => 'none' ),
 				'hAxis'   => array( 'showTextEvery' => '1' ),
-				'tooltip' => array( 'trigger' => 'none' )
+				'tooltip' => array( 'trigger' => 'none' ),
+				'chartArea' => array( 'backgroundColor' => array( 'stroke' => '#666', 'strokeWidth' => 1 ) ),
+				'segmented'  => ! empty( $second_entry_id )
 			);
 
 			if ( ! empty( $second_entry_id ) ) {
