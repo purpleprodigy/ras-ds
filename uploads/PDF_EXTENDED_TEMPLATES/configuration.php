@@ -386,7 +386,7 @@ $gf_pdf_default_configuration = array(
  * will automatically use the settings applied in the $gf_pdf_default_configuration node.
  * Set to false to disable this feature.
  */
-define( 'GFPDF_SET_DEFAULT_TEMPLATE', true );
+define( 'GFPDF_SET_DEFAULT_TEMPLATE', false );
 
 /*
  * MEMORY ISSUES?

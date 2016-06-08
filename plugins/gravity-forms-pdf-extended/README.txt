@@ -4,7 +4,7 @@ Donate link: https://gravitypdf.com
 Tags: gravity, forms, pdf, automation, attachment
 Requires at least: 3.9
 Tested up to: 4.5
-Stable tag: 3.7.7
+Stable tag: 3.7.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl.txt
 
@@ -85,6 +85,10 @@ All FAQs can be [viewed on the Gravity PDF website](https://gravitypdf.com/#faqs
 3. The configuration.php file allows you to easily assign PDFs to Gravity Forms
 
 == Changelog ==
+
+= 3.7.8 =
+* Feature - Add support for Gravity Forms 2.0 Rich Text Editor field
+* Feature - Hide Gravity PDF major upgrade prompts when compatibility checks fail
 
 = 3.7.7 =
 * Bug - Ensure 'gfpdf_post_pdf_save' action gets triggered for all PDFs when resending notifications
@@ -517,5 +521,5 @@ For more details [view the 3.x.x online documentation](https://developer.gravity
 
 == Upgrade Notice ==
 
-= 3.7.0 =
-WARNING: Minimum WordPress and Gravity Forms versions have been bumped to WordPress 3.9+ and Gravity Forms 1.8+. If you aren't running either version of this software DO NOT UPGRADE.
+= 3.7.8 =
+This update adds support for Gravity Forms 2.0 Rich Text Editor field and does pre-upgrade checks for Gravity PDF 4.0.
