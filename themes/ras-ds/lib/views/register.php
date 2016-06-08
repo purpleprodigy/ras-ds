@@ -4,5 +4,5 @@
 			<div class="col-sm-10 col-sm-offset-1">
 				<h2 class="mar-0 mar-b-4 text-9"><?php esc_html_e( $page->post_title ); ?></h2>
 				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1"><?php echo wpautop( $content ); ?>
+					<div class="col-sm-6"><?php echo wpautop( $content ); ?>
 			</div>
