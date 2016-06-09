@@ -6,7 +6,7 @@ Template Name: Compare
 Namespace RASDS;
 
 //* Remove the standard entry title
-remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+// remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 //* Remove the standard entry content
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 
