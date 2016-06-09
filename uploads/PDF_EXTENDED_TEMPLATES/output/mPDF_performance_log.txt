@@ -598,3 +598,53 @@ Number of fonts 4
 Peak Memory usage 57.75 MB
 PDF file size 9 kB
 Number of fonts 4
+2016-06-09 01:54:55 Generated in 1.79 seconds
+2016-06-09 01:54:55 Compiled in 1.81 seconds (total)
+Peak Memory usage 58.25 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:54:57 Generated in 2.00 seconds
+2016-06-09 01:54:57 Compiled in 2.01 seconds (total)
+Peak Memory usage 58.00 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:55:17 Generated in 1.41 seconds
+2016-06-09 01:55:17 Compiled in 1.42 seconds (total)
+Peak Memory usage 58.50 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:55:19 Generated in 1.84 seconds
+2016-06-09 01:55:19 Compiled in 1.86 seconds (total)
+Peak Memory usage 58.00 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:23 Generated in 1.38 seconds
+2016-06-09 01:57:23 Compiled in 1.40 seconds (total)
+Peak Memory usage 58.50 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:25 Generated in 1.42 seconds
+2016-06-09 01:57:25 Compiled in 1.43 seconds (total)
+Peak Memory usage 58.00 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:38 Generated in 1.38 seconds
+2016-06-09 01:57:38 Compiled in 1.39 seconds (total)
+Peak Memory usage 58.50 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:40 Generated in 1.40 seconds
+2016-06-09 01:57:40 Compiled in 1.42 seconds (total)
+Peak Memory usage 59.25 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:47 Generated in 1.40 seconds
+2016-06-09 01:57:47 Compiled in 1.42 seconds (total)
+Peak Memory usage 58.25 MB
+PDF file size 9 kB
+Number of fonts 4
+2016-06-09 01:57:50 Generated in 1.91 seconds
+2016-06-09 01:57:50 Compiled in 1.92 seconds (total)
+Peak Memory usage 61.00 MB
+PDF file size 9 kB
+Number of fonts 4

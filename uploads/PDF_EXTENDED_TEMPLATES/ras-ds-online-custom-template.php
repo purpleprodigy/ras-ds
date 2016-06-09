@@ -48,7 +48,7 @@ $form = RGFormsModel::get_form_meta($form_id);
 
 			?>
         <h2 class="mar-0 mar-b-4 text-9">
-	        Results: <span class="text-regular c-gray">{date_dmy}</span>
+	        Results: <span class="text-regular c-gray">{date_created}</span>
         </h2>
 
         <div class="bg-light-gray pad-y-2 pad-x-2 mar-b-4">
