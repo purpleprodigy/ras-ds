@@ -16,4 +16,7 @@ themes/ras-ds/config
 themes/ras-ds/gulpfile.js
 themes/ras-ds/package.json
 
+# GravityPDF output files
+uploads/PDF_EXTENDED_TEMPLATES/output
+
 .idea/
