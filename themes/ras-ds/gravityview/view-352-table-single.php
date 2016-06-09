@@ -24,7 +24,12 @@
 			<a class="btn btn-primary mar-r-1" href="/workbook">Go to the workbook</a>
 		</div>
 
-		<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
+		<?php if ( $content['comparison'] ) { ?>
+			echo <h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed Tests</h2>
+		<?php } else { ?>
+			<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
+
+		<?php } ?>
 
 		<?php
 
@@ -134,7 +139,7 @@
 
 					</tr>
 
-					<?php if ( ( count( $content['tables'] ) - 1 ) == $key  ) { ?>
+					<?php if ( ( count( $content['tables'] ) - 1 ) == $key ) { ?>
 
 						<tr class="<?php echo $content['total_score']['class'] ?>">
 							<td><?php echo $content['total_score']['label'] ?></td>
@@ -163,8 +168,8 @@
 							<?php } ?>
 
 						</tr>
-						
-					<?php }  ?>
+
+					<?php } ?>
 
 					</tbody>
 
