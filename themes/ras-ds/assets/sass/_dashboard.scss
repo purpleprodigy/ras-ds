@@ -9,8 +9,8 @@ dashboard
 }
 
 .fa-ul {
-  margin-top: 0;
-  margin-left: 0;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
   padding: 0;
 }
 
@@ -30,6 +30,14 @@ dashboard
   background: url(../img/bg-file.png) no-repeat;
 }
 
-table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+table.dataTable.order-column tbody tr>.sorting_1,
+table.dataTable.order-column tbody tr>.sorting_2,
+table.dataTable.order-column tbody tr>.sorting_3,
+table.dataTable.order-column tbody tr>[class^="sorting"],
+table.dataTable.display tbody tr>.sorting_1,
+table.dataTable.display tbody tr>.sorting_2,
+table.dataTable.display tbody tr>.sorting_3
+table.dataTable.display tbody tr>[class^="sorting"] {
   background-color: #fff !important;
+  border: 0 !important;
 }
