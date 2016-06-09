@@ -37,7 +37,7 @@
 			?>
 
 			<?php if ( $content['comparison'] ) { ?>
-				echo <h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed Tests</h2>
+				<h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed Tests</h2>
 			<?php } else { ?>
 				<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
 
