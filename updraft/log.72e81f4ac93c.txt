@@ -1,0 +1,450 @@
+0000.000 (0) Opened log file at time: Thu, 09 Jun 2016 01:42:23 +0000 on http://ras-ds.purpleprodigy.com
+0000.001 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 42.9M | 43.5M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.011 (0) Free space on disk containing Updraft's temporary directory: 1130157 MB
+0000.013 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 1 (schedule: twicedaily)
+0000.016 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.017 (0) Set semaphore last lock (fd) time to 2016-06-09 01:42:23
+0000.017 (0) Semaphore lock (fd) complete
+0000.020 (0) Backup run: resumption=0, nonce=72e81f4ac93c, begun at=1465436543 (0s ago), job type=backup
+0000.021 (0) Scheduling a resumption (1) after 300 seconds (1465436843) in case this run gets aborted
+0000.028 (0) Checking if we have a zip executable available
+0000.028 (0) Testing: /usr/bin/zip
+0000.033 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.033 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.034 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.034 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.038 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.039 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.039 (0) Stderr output: 
+0000.040 (0) Stderr output: 
+0000.040 (0) Stderr output: 
+0000.045 (0) Working binary zip found: /usr/bin/zip
+0000.047 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.047 (0) Creation of backups of directories: beginning
+0000.049 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.098 (0) Total entities for the zip file: 381 directories, 2788 files (0 skipped as non-modified), 78.7 MB
+0000.101 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.103 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.105 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.108 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.110 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.110 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.2 MB, 2788 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0000.202 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: size is now: 0.80 MB
+0000.208 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 600 files added (on-disk size: 828.2 KB)
+0000.210 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 700 files added (on-disk size: 828.2 KB)
+0000.212 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 800 files added (on-disk size: 828.2 KB)
+0000.215 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 900 files added (on-disk size: 828.2 KB)
+0000.217 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1000 files added (on-disk size: 828.2 KB)
+0000.217 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (14.2 MB, 2788 files batched, 501 (1002) added so far); re-opening (prior size: 828.2 KB)
+0000.956 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: size is now: 5.10 MB
+0000.964 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1100 files added (on-disk size: 5247.9 KB)
+0000.967 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1200 files added (on-disk size: 5247.9 KB)
+0000.969 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1300 files added (on-disk size: 5247.9 KB)
+0000.971 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1400 files added (on-disk size: 5247.9 KB)
+0000.973 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 2788 files batched, 469 (1471) added so far); re-opening (prior size: 5247.9 KB)
+0001.844 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: size is now: 13.80 MB
+0001.849 (0) A useful amount of data was added after this amount of zip processing: 1.5 s (normalised: 1.5 s, rate: 17204.6 KB/s)
+0001.850 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.4909420013428, normalised_time=1.4879757447636, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=105704948)
+0001.852 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1500 files added (on-disk size: 14097.6 KB)
+0001.854 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1600 files added (on-disk size: 14097.6 KB)
+0001.856 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1700 files added (on-disk size: 14097.6 KB)
+0001.858 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1800 files added (on-disk size: 14097.6 KB)
+0001.861 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 1900 files added (on-disk size: 14097.6 KB)
+0001.862 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (19.6 MB, 2788 files batched, 501 (1972) added so far); re-opening (prior size: 14097.6 KB)
+0002.689 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: size is now: 21.80 MB
+0002.696 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2000 files added (on-disk size: 22294 KB)
+0002.698 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2100 files added (on-disk size: 22294 KB)
+0002.701 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2200 files added (on-disk size: 22294 KB)
+0002.704 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2300 files added (on-disk size: 22294 KB)
+0002.706 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2400 files added (on-disk size: 22294 KB)
+0002.708 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.4 MB, 2788 files batched, 501 (2473) added so far); re-opening (prior size: 22294 KB)
+0003.508 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2500 files added (on-disk size: 25157 KB)
+0003.510 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2600 files added (on-disk size: 25157 KB)
+0003.512 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip.tmp: 2700 files added (on-disk size: 25157 KB)
+0004.093 (0) Created plugins zip (0) - 28174 KB in 4 s (6983.5 KB/s) (SHA1 checksum: 9213c107b3f2da2319bf9e6f1abd2b7a0b725753)
+0004.095 (0) Beginning creation of dump of themes (split every: 400 MB)
+0004.111 (0) Total entities for the zip file: 44 directories, 261 files (0 skipped as non-modified), 3.8 MB
+0004.113 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0004.115 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0004.241 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip.tmp: size is now: 2.40 MB
+0004.252 (0) Created themes zip (0) - 2467.6 KB in 0.1 s (16841.6 KB/s) (SHA1 checksum: 878ebfc460ad98ce85e8f117c45eeadbeb788d84)
+0004.254 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0004.254 (0) Looking for candidates to back up in: /home/purplep5/public_html/ras-ds/wp-content/uploads
+0004.255 (0) finding files: PDF_EXTENDED_TEMPLATES: adding to list (1)
+0004.255 (0) finding files: 2016: adding to list (2)
+0004.256 (0) finding files: wp-migrate-db: adding to list (3)
+0004.256 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0004.268 (0) Total entities for the zip file: 27 directories, 40 files (0 skipped as non-modified), 0.6 MB
+0004.295 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip.tmp: size is now: 0.50 MB
+0004.299 (0) Created uploads zip (0) - 464.8 KB in 0 s (14103.1 KB/s) (SHA1 checksum: 1858889edeeef027663791115cc00378ed86274a)
+0004.301 (0) Beginning backup of other directories found in the content directory (index: 0)
+0004.301 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0004.302 (0) Looking for candidates to back up in: /home/purplep5/public_html/ras-ds/wp-content
+0004.302 (0) finding files: uploads: skipping: this is the uploads directory
+0004.302 (0) finding files: plugins: skipping: this is the plugins directory
+0004.303 (0) finding files: updraft: skipping: this is the updraft directory
+0004.303 (0) finding files: .gitignore: adding to list (1)
+0004.304 (0) finding files: index.php: adding to list (2)
+0004.304 (0) finding files: README.md: adding to list (3)
+0004.305 (0) finding files: upgrade: skipping: excluded by options
+0004.305 (0) finding files: themes: skipping: this is the themes directory
+0004.306 (0) finding files: .git: adding to list (4)
+0004.330 (0) Total entities for the zip file: 258 directories, 700 files (0 skipped as non-modified), 24.9 MB
+0004.333 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0004.335 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 200 files added (on-disk size: 0 KB)
+0004.337 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 300 files added (on-disk size: 0 KB)
+0004.340 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 400 files added (on-disk size: 0 KB)
+0004.342 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 500 files added (on-disk size: 0 KB)
+0004.342 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.9 MB, 700 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0004.435 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: size is now: 1.90 MB
+0004.442 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 600 files added (on-disk size: 1898.7 KB)
+0004.444 (0) Zip: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: 700 files added (on-disk size: 1898.7 KB)
+0005.379 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip.tmp: size is now: 24.40 MB
+0005.459 (0) Created others zip (0) - 24964.3 KB in 1.1 s (21843.7 KB/s) (SHA1 checksum: 1e14c428b7ab636dd1e14a205480127d852e7b68)
+0005.462 (0) Saving backup status to database (elements: 8)
+0005.464 (0) Beginning creation of database dump (WordPress DB)
+0005.465 (0) Testing: /usr/bin/mysqldump
+0005.480 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0005.486 (0) Table wp_options: Total expected rows (approximate): 327
+0005.516 (0) Table wp_options: Total rows added: 334 in 0.03 seconds
+0005.520 (0) Table wp_options: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_options.table.gz - 105 KB)
+0005.526 (0) Table wp_users: Total expected rows (approximate): 2
+0005.528 (0) Table wp_users: Total rows added: 8 in 0.00 seconds
+0005.528 (0) Table wp_users: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_users.table.gz - 1.1 KB)
+0005.534 (0) Table wp_usermeta: Total expected rows (approximate): 123
+0005.538 (0) Table wp_usermeta: Total rows added: 128 in 0.00 seconds
+0005.539 (0) Table wp_usermeta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_usermeta.table.gz - 4.6 KB)
+0005.545 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0005.547 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.548 (0) Table wp_commentmeta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0005.553 (0) Table wp_comments: Total expected rows (approximate): 0
+0005.555 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0005.555 (0) Table wp_comments: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_comments.table.gz - 0.5 KB)
+0005.560 (0) Table wp_links: Total expected rows (approximate): 0
+0005.561 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0005.562 (0) Table wp_links: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_links.table.gz - 0.4 KB)
+0005.568 (0) Table wp_postmeta: Total expected rows (approximate): 198
+0005.575 (0) Table wp_postmeta: Total rows added: 196 in 0.01 seconds
+0005.575 (0) Table wp_postmeta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_postmeta.table.gz - 9.7 KB)
+0005.580 (0) Table wp_posts: Total expected rows (approximate): 193
+0005.606 (0) Table wp_posts: Total rows added: 197 in 0.03 seconds
+0005.607 (0) Table wp_posts: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_posts.table.gz - 52.6 KB)
+0005.613 (0) Table wp_signups: Total expected rows (approximate): 0
+0005.614 (0) Table wp_signups: Total rows added: 0 in 0.00 seconds
+0005.615 (0) Table wp_signups: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_signups.table.gz - 0.5 KB)
+0005.620 (0) Table wp_term_relationships: Total expected rows (approximate): 10
+0005.622 (0) Table wp_term_relationships: Total rows added: 10 in 0.00 seconds
+0005.622 (0) Table wp_term_relationships: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0005.626 (0) Table wp_term_taxonomy: Total expected rows (approximate): 3
+0005.628 (0) Table wp_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0005.628 (0) Table wp_term_taxonomy: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0005.633 (0) Table wp_termmeta: Total expected rows (approximate): 22
+0005.635 (0) Table wp_termmeta: Total rows added: 22 in 0.00 seconds
+0005.636 (0) Table wp_termmeta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_termmeta.table.gz - 0.6 KB)
+0005.641 (0) Table wp_terms: Total expected rows (approximate): 3
+0005.642 (0) Table wp_terms: Total rows added: 3 in 0.00 seconds
+0005.643 (0) Table wp_terms: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_terms.table.gz - 0.4 KB)
+0005.646 (0) Table wp_gf_addon_feed: Total expected rows (approximate): 2
+0005.648 (0) Table wp_gf_addon_feed: Total rows added: 2 in 0.00 seconds
+0005.648 (0) Table wp_gf_addon_feed: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_gf_addon_feed.table.gz - 0.6 KB)
+0005.652 (0) Table wp_login_log: Total expected rows (approximate): 0
+0005.653 (0) Table wp_login_log: Total rows added: 0 in 0.00 seconds
+0005.654 (0) Table wp_login_log: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_login_log.table.gz - 0.3 KB)
+0005.657 (0) Table wp_rg_form: Total expected rows (approximate): 6
+0005.659 (0) Table wp_rg_form: Total rows added: 6 in 0.00 seconds
+0005.659 (0) Table wp_rg_form: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form.table.gz - 0.6 KB)
+0005.663 (0) Table wp_rg_form_meta: Total expected rows (approximate): 6
+0005.669 (0) Table wp_rg_form_meta: Total rows added: 6 in 0.01 seconds
+0005.669 (0) Table wp_rg_form_meta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form_meta.table.gz - 12.9 KB)
+0005.674 (0) Table wp_rg_form_view: Total expected rows (approximate): 15
+0005.676 (0) Table wp_rg_form_view: Total rows added: 35 in 0.00 seconds
+0005.677 (0) Table wp_rg_form_view: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form_view.table.gz - 0.9 KB)
+0005.680 (0) Table wp_rg_incomplete_submissions: Total expected rows (approximate): 8
+0005.683 (0) Table wp_rg_incomplete_submissions: Total rows added: 10 in 0.00 seconds
+0005.683 (0) Table wp_rg_incomplete_submissions: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_incomplete_submissions.table.gz - 2.1 KB)
+0005.687 (0) Table wp_rg_lead: Total expected rows (approximate): 21
+0005.691 (0) Table wp_rg_lead: Total rows added: 58 in 0.00 seconds
+0005.691 (0) Table wp_rg_lead: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead.table.gz - 2 KB)
+0005.696 (0) Table wp_rg_lead_detail: Total expected rows (approximate): 737
+0005.707 (0) Table wp_rg_lead_detail: Total rows added: 876 in 0.01 seconds
+0005.708 (0) Table wp_rg_lead_detail: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_detail.table.gz - 6 KB)
+0005.713 (0) Table wp_rg_lead_detail_long: Total expected rows (approximate): 0
+0005.715 (0) Table wp_rg_lead_detail_long: Total rows added: 0 in 0.00 seconds
+0005.715 (0) Table wp_rg_lead_detail_long: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_detail_long.table.gz - 0.3 KB)
+0005.719 (0) Table wp_rg_lead_meta: Total expected rows (approximate): 135
+0005.723 (0) Table wp_rg_lead_meta: Total rows added: 148 in 0.00 seconds
+0005.723 (0) Table wp_rg_lead_meta: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_meta.table.gz - 2.1 KB)
+0005.728 (0) Table wp_rg_lead_notes: Total expected rows (approximate): 10
+0005.729 (0) Table wp_rg_lead_notes: Total rows added: 12 in 0.00 seconds
+0005.730 (0) Table wp_rg_lead_notes: finishing file (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_notes.table.gz - 0.7 KB)
+0005.732 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_options.table.gz (1/24): adding to final database dump
+0005.755 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_users.table.gz (2/24): adding to final database dump
+0005.756 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_usermeta.table.gz (3/24): adding to final database dump
+0005.758 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_commentmeta.table.gz (4/24): adding to final database dump
+0005.759 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_comments.table.gz (5/24): adding to final database dump
+0005.759 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_links.table.gz (6/24): adding to final database dump
+0005.760 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_postmeta.table.gz (7/24): adding to final database dump
+0005.764 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_posts.table.gz (8/24): adding to final database dump
+0005.778 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_signups.table.gz (9/24): adding to final database dump
+0005.779 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_term_relationships.table.gz (10/24): adding to final database dump
+0005.780 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_term_taxonomy.table.gz (11/24): adding to final database dump
+0005.780 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_termmeta.table.gz (12/24): adding to final database dump
+0005.781 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_terms.table.gz (13/24): adding to final database dump
+0005.782 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_gf_addon_feed.table.gz (14/24): adding to final database dump
+0005.782 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_login_log.table.gz (15/24): adding to final database dump
+0005.783 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form.table.gz (16/24): adding to final database dump
+0005.784 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form_meta.table.gz (17/24): adding to final database dump
+0005.788 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_form_view.table.gz (18/24): adding to final database dump
+0005.789 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_incomplete_submissions.table.gz (19/24): adding to final database dump
+0005.790 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead.table.gz (20/24): adding to final database dump
+0005.791 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_detail.table.gz (21/24): adding to final database dump
+0005.797 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_detail_long.table.gz (22/24): adding to final database dump
+0005.798 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_meta.table.gz (23/24): adding to final database dump
+0005.800 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db-table-wp_rg_lead_notes.table.gz (24/24): adding to final database dump
+0005.802 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: finished writing out complete database file (176 KB)
+0005.806 (0) Total database tables backed up: 24 (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz, size: 204805, checksum (SHA1): a3c02849a254ac5d935736ea6723f96c362e063e)
+0005.810 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0005.810 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0005.811 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0005.811 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0005.812 (0) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0005.812 (0) Saving backup history. Total backup size: 55 MB
+0005.814 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0005.815 (0) Cloud backup selection (1/1): dropbox (last)
+0005.816 (0) Beginning dispatch of backup to remote (dropbox)
+0005.816 (0) Dropbox: begin cloud upload
+0005.819 (0) Dropbox: access gained; setting chunk size to: 1024 KB
+0006.836 (0) Dropbox quota usage: normal=569.2 MB, shared=10426.1 MB, total=1057536 MB, available=1046540.8 MB
+0006.837 (0) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip
+0014.541 (0) Dropbox chunked upload: 3.6 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 1048576, 1024 KB)
+0021.729 (0) Dropbox chunked upload: 7.3 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 2097152, 1024 KB)
+0029.470 (0) Dropbox chunked upload: 10.9 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 3145728, 1024 KB)
+0299.911 (1) Opened log file at time: Thu, 09 Jun 2016 01:47:23 +0000 on http://ras-ds.purpleprodigy.com
+0299.912 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0299.922 (1) Free space on disk containing Updraft's temporary directory: 1130117.8 MB
+0299.923 (1) Backup run: resumption=1, nonce=72e81f4ac93c, begun at=1465436543 (300s ago), job type=backup, previous check-in=29.5s
+0299.924 (1) Scheduling a resumption (2) after 300 seconds (1465437143) in case this run gets aborted
+0299.932 (1) Checking if we have a zip executable available
+0299.932 (1) Zip engine: found/will use a binary zip: /usr/bin/zip
+0299.933 (1) Creation of backups of directories: already finished
+0299.933 (1) Saving backup status to database (elements: 8)
+0299.934 (1) Database dump (WordPress DB): Creation was completed already
+0299.937 (1) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0299.938 (1) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0299.938 (1) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0299.939 (1) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0299.939 (1) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0299.940 (1) Saving backup history. Total backup size: 55 MB
+0299.941 (1) Requesting upload of the files that have not yet been successfully uploaded (5)
+0299.942 (1) Cloud backup selection (1/1): dropbox (last)
+0299.943 (1) Beginning dispatch of backup to remote (dropbox)
+0299.944 (1) Dropbox: begin cloud upload
+0299.946 (1) Dropbox: access gained; setting chunk size to: 1024 KB
+0301.030 (1) Dropbox quota usage: normal=569.2 MB, shared=10426.1 MB, total=1057536 MB, available=1046540.8 MB
+0301.037 (1) This is a resumption: 3145728 bytes had already been uploaded
+0301.037 (1) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip
+0311.262 (1) Dropbox chunked upload: 14.5 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 4194304, 1024 KB)
+0318.616 (1) Dropbox chunked upload: 18.2 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 5242880, 1024 KB)
+0326.216 (1) Dropbox chunked upload: 21.8 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 6291456, 1024 KB)
+0335.631 (1) Dropbox chunked upload: 25.4 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 7340032, 1024 KB)
+0344.394 (1) Dropbox chunked upload: 29.1 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 8388608, 1024 KB)
+0351.521 (1) Dropbox chunked upload: 32.7 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 9437184, 1024 KB)
+0359.567 (1) Dropbox chunked upload: 36.3 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 10485760, 1024 KB)
+0603.195 (2) Opened log file at time: Thu, 09 Jun 2016 01:52:26 +0000 on http://ras-ds.purpleprodigy.com
+0603.196 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0603.791 (2) Free space on disk containing Updraft's temporary directory: 1130099 MB
+0603.793 (2) Backup run: resumption=2, nonce=72e81f4ac93c, begun at=1465436543 (604s ago), job type=backup, previous check-in=59.7s
+0603.796 (2) Scheduling a resumption (3) after 300 seconds (1465437447) in case this run gets aborted
+0603.804 (2) Checking if we have a zip executable available
+0603.805 (2) Zip engine: found/will use a binary zip: /usr/bin/zip
+0603.806 (2) Creation of backups of directories: already finished
+0603.807 (2) Saving backup status to database (elements: 8)
+0603.810 (2) Database dump (WordPress DB): Creation was completed already
+0603.816 (2) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0603.817 (2) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0603.817 (2) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0603.818 (2) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0603.819 (2) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0603.819 (2) Saving backup history. Total backup size: 55 MB
+0603.822 (2) Requesting upload of the files that have not yet been successfully uploaded (5)
+0603.822 (2) Cloud backup selection (1/1): dropbox (last)
+0603.824 (2) Beginning dispatch of backup to remote (dropbox)
+0603.825 (2) Dropbox: begin cloud upload
+0603.828 (2) Dropbox: access gained; setting chunk size to: 1024 KB
+0604.869 (2) Dropbox quota usage: normal=569.2 MB, shared=10426.1 MB, total=1057536 MB, available=1046540.8 MB
+0604.875 (2) This is a resumption: 10485760 bytes had already been uploaded
+0604.876 (2) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip
+0613.044 (2) Dropbox chunked upload: 40 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 11534336, 1024 KB)
+0621.421 (2) Dropbox chunked upload: 43.6 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 12582912, 1024 KB)
+0628.718 (2) Dropbox chunked upload: 47.2 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 13631488, 1024 KB)
+0637.512 (2) Dropbox chunked upload: 50.9 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 14680064, 1024 KB)
+0647.689 (2) Dropbox chunked upload: 54.5 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 15728640, 1024 KB)
+0656.792 (2) Dropbox chunked upload: 58.2 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 16777216, 1024 KB)
+0909.427 (3) Opened log file at time: Thu, 09 Jun 2016 01:57:33 +0000 on http://ras-ds.purpleprodigy.com
+0909.428 (3) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0909.438 (3) Free space on disk containing Updraft's temporary directory: 1130101.1 MB
+0909.440 (3) Backup run: resumption=3, nonce=72e81f4ac93c, begun at=1465436543 (910s ago), job type=backup, previous check-in=53.6s
+0909.441 (3) Scheduling a resumption (4) after 300 seconds (1465437753) in case this run gets aborted
+0909.449 (3) Checking if we have a zip executable available
+0909.450 (3) Zip engine: found/will use a binary zip: /usr/bin/zip
+0909.451 (3) Creation of backups of directories: already finished
+0909.451 (3) Saving backup status to database (elements: 8)
+0909.453 (3) Database dump (WordPress DB): Creation was completed already
+0909.458 (3) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0909.459 (3) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0909.459 (3) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0909.460 (3) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+0909.461 (3) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+0909.461 (3) Saving backup history. Total backup size: 55 MB
+0909.465 (3) Requesting upload of the files that have not yet been successfully uploaded (5)
+0909.466 (3) Cloud backup selection (1/1): dropbox (last)
+0909.469 (3) Beginning dispatch of backup to remote (dropbox)
+0909.470 (3) Dropbox: begin cloud upload
+0909.474 (3) Dropbox: access gained; setting chunk size to: 1024 KB
+0910.484 (3) Dropbox quota usage: normal=569.2 MB, shared=10426.1 MB, total=1057536 MB, available=1046540.8 MB
+0910.485 (3) This is a resumption: 16777216 bytes had already been uploaded
+0910.485 (3) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip
+0916.895 (3) Dropbox chunked upload exception (Dropbox_BadRequestException): Submitted input out of alignment: got [16777216] expected [17825792] (line: 169, file: /home/purplep5/public_html/ras-ds/wp-content/plugins/updraftplus/includes/Dropbox/OAuth/Consumer/Curl.php)
+0917.150 (3) Dropbox not yet aligned: tried=16777216, wanted=17825792; will attempt recovery
+0924.909 (3) Dropbox chunked upload: 65.4 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 18874368, 1024 KB)
+0934.439 (3) Dropbox chunked upload: 69.1 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 19922944, 1024 KB)
+0943.548 (3) Dropbox chunked upload: 72.7 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 20971520, 1024 KB)
+0951.383 (3) Dropbox chunked upload: 76.3 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 22020096, 1024 KB)
+0963.083 (3) Dropbox chunked upload: 80 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 23068672, 1024 KB)
+1236.989 (4) Opened log file at time: Thu, 09 Jun 2016 02:03:00 +0000 on http://ras-ds.purpleprodigy.com
+1236.989 (4) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+1236.999 (4) Free space on disk containing Updraft's temporary directory: 1130085.8 MB
+1237.000 (4) Backup run: resumption=4, nonce=72e81f4ac93c, begun at=1465436543 (1237s ago), job type=backup, previous check-in=53.7s
+1237.001 (4) Scheduling a resumption (5) after 300 seconds (1465438080) in case this run gets aborted
+1237.009 (4) Checking if we have a zip executable available
+1237.010 (4) Zip engine: found/will use a binary zip: /usr/bin/zip
+1237.010 (4) Creation of backups of directories: already finished
+1237.011 (4) Saving backup status to database (elements: 8)
+1237.013 (4) Database dump (WordPress DB): Creation was completed already
+1237.016 (4) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+1237.017 (4) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+1237.017 (4) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+1237.018 (4) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+1237.018 (4) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+1237.019 (4) Saving backup history. Total backup size: 55 MB
+1237.021 (4) Requesting upload of the files that have not yet been successfully uploaded (5)
+1237.022 (4) Cloud backup selection (1/1): dropbox (last)
+1237.023 (4) Beginning dispatch of backup to remote (dropbox)
+1237.024 (4) Dropbox: begin cloud upload
+1237.029 (4) Dropbox: access gained; setting chunk size to: 1024 KB
+1238.501 (4) Dropbox quota usage: normal=569.2 MB, shared=10426.1 MB, total=1057536 MB, available=1046540.8 MB
+1238.503 (4) This is a resumption: 23068672 bytes had already been uploaded
+1238.503 (4) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip
+1245.160 (4) Dropbox chunked upload exception (Dropbox_BadRequestException): Submitted input out of alignment: got [23068672] expected [24117248] (line: 169, file: /home/purplep5/public_html/ras-ds/wp-content/plugins/updraftplus/includes/Dropbox/OAuth/Consumer/Curl.php)
+1245.161 (4) Dropbox not yet aligned: tried=23068672, wanted=24117248; will attempt recovery
+1253.481 (4) Dropbox chunked upload: 87.2 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 25165824, 1024 KB)
+1260.344 (4) Dropbox chunked upload: 90.9 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 26214400, 1024 KB)
+1268.457 (4) Dropbox chunked upload: 94.5 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 27262976, 1024 KB)
+1277.408 (4) Dropbox chunked upload: 98.1 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 28311552, 1024 KB)
+1286.720 (4) Dropbox chunked upload: 100 % uploaded (AAAAAAAAe-3n3qr1V2osLA, 28850139, 1024 KB)
+1290.926 (4) Recording as successfully uploaded: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip (a7193c9daf5a6ffedfaa171ba547d63e)
+1290.935 (4) Deleting local file: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: OK
+1290.936 (4) Dropbox: File upload success (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip): 28173 KB in 52s (537 KB/s)
+1291.940 (4) Dropbox quota usage: normal=596.7 MB, shared=10426.1 MB, total=1057536 MB, available=1046513.2 MB
+1291.941 (4) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip
+1552.831 (5) Opened log file at time: Thu, 09 Jun 2016 02:08:16 +0000 on http://ras-ds.purpleprodigy.com
+1552.832 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+1552.841 (5) Free space on disk containing Updraft's temporary directory: 1130147.7 MB
+1552.843 (5) Backup run: resumption=5, nonce=72e81f4ac93c, begun at=1465436543 (1553s ago), job type=backup, previous check-in=49.7s
+1552.845 (5) Scheduling a resumption (6) after 300 seconds (1465438396) in case this run gets aborted
+1552.852 (5) Checking if we have a zip executable available
+1552.853 (5) Zip engine: found/will use a binary zip: /usr/bin/zip
+1552.853 (5) Creation of backups of directories: already finished
+1552.854 (5) Saving backup status to database (elements: 8)
+1552.856 (5) Database dump (WordPress DB): Creation was completed already
+1552.862 (5) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has already been successfully uploaded
+1552.862 (5) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+1552.863 (5) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+1552.863 (5) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+1552.864 (5) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+1552.864 (5) Saving backup history. Total backup size: 55 MB
+1552.866 (5) Requesting upload of the files that have not yet been successfully uploaded (4)
+1552.866 (5) Cloud backup selection (1/1): dropbox (last)
+1552.868 (5) Beginning dispatch of backup to remote (dropbox)
+1552.869 (5) Dropbox: begin cloud upload
+1552.872 (5) Dropbox: access gained; setting chunk size to: 1024 KB
+1553.922 (5) Dropbox quota usage: normal=596.7 MB, shared=10426.1 MB, total=1057536 MB, available=1046513.2 MB
+1553.924 (5) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip
+1561.531 (5) Dropbox chunked upload: 41.5 % uploaded (AAAAAAAAe-6mfgzDihZD3A, 1048576, 1024 KB)
+1569.812 (5) Dropbox chunked upload: 83 % uploaded (AAAAAAAAe-6mfgzDihZD3A, 2097152, 1024 KB)
+1576.386 (5) Dropbox chunked upload: 100 % uploaded (AAAAAAAAe-6mfgzDihZD3A, 2526873, 1024 KB)
+1580.210 (5) Recording as successfully uploaded: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip (5496e775320401e0e993b4e98a3cf216)
+1580.213 (5) Deleting local file: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: OK
+1580.214 (5) Dropbox: File upload success (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip): 2467 KB in 26s (93 KB/s)
+1581.167 (5) Dropbox quota usage: normal=599.1 MB, shared=10426.1 MB, total=1057536 MB, available=1046510.8 MB
+1581.169 (5) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip
+1586.072 (5) Dropbox chunked upload: 100 % uploaded (AAAAAAAAe--zY6JqCYbawA, 475994, 1024 KB)
+1589.324 (5) Recording as successfully uploaded: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip (3d650e8d9576b7bdb149e996a73735de)
+1589.326 (5) Deleting local file: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: OK
+1589.327 (5) Dropbox: File upload success (backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip): 464 KB in 8s (56 KB/s)
+1590.480 (5) Dropbox quota usage: normal=599.5 MB, shared=10426.1 MB, total=1057536 MB, available=1046510.4 MB
+1590.481 (5) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip
+1598.833 (5) Dropbox chunked upload: 4.1 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 1048576, 1024 KB)
+1612.701 (5) Dropbox chunked upload: 8.2 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 2097152, 1024 KB)
+1916.349 (6) Opened log file at time: Thu, 09 Jun 2016 02:14:19 +0000 on http://ras-ds.purpleprodigy.com
+1916.349 (6) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.4M | 34.8M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+1916.360 (6) Free space on disk containing Updraft's temporary directory: 1130122.3 MB
+1916.362 (6) Backup run: resumption=6, nonce=72e81f4ac93c, begun at=1465436543 (1916s ago), job type=backup, previous check-in=59.9s
+1916.364 (6) Scheduling a resumption (7) after 300 seconds (1465438759) in case this run gets aborted
+1916.372 (6) Checking if we have a zip executable available
+1916.373 (6) Zip engine: found/will use a binary zip: /usr/bin/zip
+1916.373 (6) Creation of backups of directories: already finished
+1916.375 (6) Saving backup status to database (elements: 8)
+1916.378 (6) Database dump (WordPress DB): Creation was completed already
+1916.383 (6) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has already been successfully uploaded
+1916.384 (6) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has already been successfully uploaded
+1916.385 (6) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has already been successfully uploaded
+1916.385 (6) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+1916.386 (6) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+1916.386 (6) Saving backup history. Total backup size: 55 MB
+1916.393 (6) Requesting upload of the files that have not yet been successfully uploaded (2)
+1916.395 (6) Cloud backup selection (1/1): dropbox (last)
+1916.396 (6) Beginning dispatch of backup to remote (dropbox)
+1916.397 (6) Dropbox: begin cloud upload
+1916.402 (6) Dropbox: access gained; setting chunk size to: 1024 KB
+1917.433 (6) Dropbox quota usage: normal=599.5 MB, shared=10426.1 MB, total=1057536 MB, available=1046510.4 MB
+1917.433 (6) This is a resumption: 2097152 bytes had already been uploaded
+1917.434 (6) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip
+1926.691 (6) Dropbox chunked upload: 12.3 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 3145728, 1024 KB)
+1935.738 (6) Dropbox chunked upload: 16.4 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 4194304, 1024 KB)
+1943.061 (6) Dropbox chunked upload: 20.5 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 5242880, 1024 KB)
+1952.019 (6) Dropbox chunked upload: 24.6 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 6291456, 1024 KB)
+1961.251 (6) Dropbox chunked upload: 28.7 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 7340032, 1024 KB)
+1969.531 (6) Dropbox chunked upload: 32.8 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 8388608, 1024 KB)
+2259.144 (7) Opened log file at time: Thu, 09 Jun 2016 02:20:02 +0000 on http://ras-ds.purpleprodigy.com
+2259.144 (7) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.13 WP: 4.5.2 PHP: 5.6.22 (Linux serv01.sm11.siteground.biz 3.12.18-clouder0 #13 SMP Tue Mar 15 13:23:00 EET 2016 x86_64) MySQL: 5.6.28 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 34.1M | 34.3M) multisite: N openssl: OpenSSL 1.0.2h  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+2259.157 (7) Free space on disk containing Updraft's temporary directory: 1130107.5 MB
+2259.159 (7) Backup run: resumption=7, nonce=72e81f4ac93c, begun at=1465436543 (2259s ago), job type=backup, previous check-in=53.2s
+2259.161 (7) Scheduling a resumption (8) after 300 seconds (1465439102) in case this run gets aborted
+2259.169 (7) Checking if we have a zip executable available
+2259.170 (7) Zip engine: found/will use a binary zip: /usr/bin/zip
+2259.170 (7) Creation of backups of directories: already finished
+2259.171 (7) Saving backup status to database (elements: 8)
+2259.173 (7) Database dump (WordPress DB): Creation was completed already
+2259.178 (7) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-plugins.zip: plugins: This file has already been successfully uploaded
+2259.178 (7) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-themes.zip: themes: This file has already been successfully uploaded
+2259.181 (7) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-uploads.zip: uploads: This file has already been successfully uploaded
+2259.182 (7) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip: others: This file has not yet been successfully uploaded: will queue
+2259.182 (7) backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-db.gz: db: This file has not yet been successfully uploaded: will queue
+2259.183 (7) Saving backup history. Total backup size: 55 MB
+2259.185 (7) Requesting upload of the files that have not yet been successfully uploaded (2)
+2259.185 (7) Cloud backup selection (1/1): dropbox (last)
+2259.187 (7) Beginning dispatch of backup to remote (dropbox)
+2259.187 (7) Dropbox: begin cloud upload
+2259.191 (7) Dropbox: access gained; setting chunk size to: 1024 KB
+2260.267 (7) Dropbox quota usage: normal=599.5 MB, shared=10426.1 MB, total=1057536 MB, available=1046510.4 MB
+2260.269 (7) This is a resumption: 8388608 bytes had already been uploaded
+2260.269 (7) Dropbox: Attempt to upload: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip to: backup_2016-06-09-1142_RASDS_My_mental_health_recovery_72e81f4ac93c-others.zip
+2266.198 (7) Dropbox chunked upload exception (Dropbox_BadRequestException): Submitted input out of alignment: got [8388608] expected [9437184] (line: 169, file: /home/purplep5/public_html/ras-ds/wp-content/plugins/updraftplus/includes/Dropbox/OAuth/Consumer/Curl.php)
+2266.199 (7) Dropbox not yet aligned: tried=8388608, wanted=9437184; will attempt recovery
+2274.580 (7) Dropbox chunked upload: 41 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 10485760, 1024 KB)
+2283.215 (7) Dropbox chunked upload: 45.1 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 11534336, 1024 KB)
+2291.877 (7) Dropbox chunked upload: 49.2 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 12582912, 1024 KB)
+2299.148 (7) Dropbox chunked upload: 53.3 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 13631488, 1024 KB)
+2307.441 (7) Dropbox chunked upload: 57.4 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 14680064, 1024 KB)
+2315.474 (7) Dropbox chunked upload: 61.5 % uploaded (AAAAAAAAe_Db0icgvJPx0w, 15728640, 1024 KB)
