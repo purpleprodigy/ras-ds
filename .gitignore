@@ -19,4 +19,7 @@ themes/ras-ds/package.json
 # GravityPDF output files
 uploads/PDF_EXTENDED_TEMPLATES/output
 
+# Updraft backups
+updraft/
+
 .idea/
