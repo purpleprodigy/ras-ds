@@ -3,22 +3,32 @@ login
 ----------------------------------- */
 
 .login {
-	padding: 4px 0;
-	color: $white;
+  padding: 4px 0;
+  color: $white;
 }
 
 .login-description,
 .login p {
-	display: inline-block;
-	margin: 0 10px 0 0;
+  display: inline-block;
+  margin: 0 10px 0 0;
 }
 
 .login-username {
-	display: inline-block;
-	margin-right: 10px;
+  display: block;
+  margin-right: 0;
 }
 
 .login a {
-	color: $white;
-	text-decoration: underline;
+  color: $white;
+  text-decoration: underline;
+}
+
+
+// hack to center article in viewport
+
+.post-145 {
+  max-width: 966px;
+  margin: 0 auto;
+  padding-left: 9.5%;
+  padding-right: 9.5%;
 }
