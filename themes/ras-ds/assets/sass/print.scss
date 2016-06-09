@@ -7,10 +7,13 @@ a:visited {
   color: #000;
 }
 
-.login,
-.nav,
-.footer {
-  display: none;
+.row-gray,
+.row-black,
+.row-blue,
+.row-light-blue,
+.row-red,
+.row-olive {
+  background: #000;
 }
 
 .btn,
@@ -20,18 +23,10 @@ a:visited {
 .gform_previous_button,
 .gform_save_link,
 .button-primary,
+.login,
 .nav,
 .footer {
-  background: #000 !important;
-  border: 1px solid #000 !important;
-  color: #fff !important;
-}
-
-.row-gray,
-.row-black,
-.row-blue,
-.row-light-blue,
-.row-red,
-.row-olive {
-  background: #000;
+  display: none;
+  position: absolute;
+  left: -5000em;
 }

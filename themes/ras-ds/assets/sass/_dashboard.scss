@@ -15,8 +15,8 @@ dashboard
 }
 
 .fa-ul li {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .fa-ul li i {
@@ -28,4 +28,8 @@ dashboard
   display: inline-block;
   padding: 0 0 .2em 20px;
   background: url(../img/bg-file.png) no-repeat;
+}
+
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+  background-color: #fff !important;
 }

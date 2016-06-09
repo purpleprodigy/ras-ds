@@ -22,3 +22,13 @@ login
   color: $white;
   text-decoration: underline;
 }
+
+
+// hack to center article in viewport
+
+.post-145 {
+  max-width: 966px;
+  margin: 0 auto;
+  padding-left: 9.5%;
+  padding-right: 9.5%;
+}
