@@ -61,19 +61,19 @@
 							<th class="col-sm-4" colspan="2"><?php echo $content['test2'] ?></th>
 						</tr>
 						<tr>
-							<th class="col-sm-7">Question</th>
-							<th class="col-sm-1">Score</th>
-							<th class="col-sm-4">Comment</th>
-							<th class="col-sm-1">Score</th>
-							<th class="col-sm-4">Comment</th>
+							<th class="col-sm-7 compare-results-question">Question</th>
+							<th class="col-sm-1 compare-results-score">Score</th>
+							<th class="col-sm-4 compare-results-comment">Comment</th>
+							<th class="col-sm-1 compare-results-score">Score</th>
+							<th class="col-sm-4 compare-results-comment">Comment</th>
 						</tr>
 
 					<?php } else { ?>
 
 						<tr>
-							<th class="col-sm-7">Question</th>
-							<th class="col-sm-1">Score</th>
-							<th class="col-sm-4">Comment</th>
+							<th class="col-sm-7 single-results-question">Question</th>
+							<th class="col-sm-1 single-results-score">Score</th>
+							<th class="col-sm-4 single-results-comment">Comment</th>
 						</tr>
 
 					<?php } ?>
@@ -89,9 +89,9 @@
 							<tr>
 								<td><?php echo $row['question'] ?></td>
 								<td><?php echo $row['score'] ?></td>
-								<td><?php echo $row['comment']['class'] ?></td>
+								<td class="results-comment"><?php echo $row['comment']['class'] ?></td>
 								<td><?php echo $row['comparison_score'] ?></td>
-								<td><?php echo $row['comparison_comment']['class'] ?></td>
+								<td class="results-comment"><?php echo $row['comparison_comment']['class'] ?></td>
 							</tr>
 
 						<?php } else { ?>
@@ -99,7 +99,7 @@
 							<tr>
 								<td><?php echo $row['question'] ?></td>
 								<td><?php echo $row['score'] ?></td>
-								<td><?php echo $row['comment'] ?></td>
+								<td class="results-comment"><?php echo $row['comment'] ?></td>
 							</tr>
 
 						<?php } ?>
