@@ -89,9 +89,9 @@
 							<tr>
 								<td><?php echo $row['question'] ?></td>
 								<td><?php echo $row['score'] ?></td>
-								<td><?php echo $row['comment'] ?></td>
+								<td><?php echo $row['comment']['class'] ?></td>
 								<td><?php echo $row['comparison_score'] ?></td>
-								<td><?php echo $row['comparison_comment'] ?></td>
+								<td><?php echo $row['comparison_comment']['class'] ?></td>
 							</tr>
 
 						<?php } else { ?>
@@ -171,7 +171,15 @@
 				</table>
 
 			<?php } ?>
-
+			<div class="mar-b-4">
+				<a class="btn btn-primary mar-r-1" href="javascript:void()" onclick="window.print()">Print</a>
+				<a class="btn btn-primary mar-r-1"
+				   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php">PDF</a>
+				<a class="btn btn-primary mar-r-1" id="rasds-email-entry"
+				   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?>">Email</a>
+				<a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a>
+				<a class="btn btn-primary mar-r-1" href="/workbook">Go to the workbook</a>
+			</div>
 			<?php echo $content['understanding']['output']; ?>
 
 		<?php } ?>
