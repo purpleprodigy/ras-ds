@@ -51,8 +51,7 @@ function pp_login_form() {
 		echo '<a href="' . get_bloginfo( 'url' ) . "/wp-login.php?action=lostpassword" . '">Forgotten your password?</a><br>';
 		echo 'Don’t have an account? <a href="' . get_bloginfo( 'url' ) . "/register" . '">Register now</a>';
 	} else {
-		echo 'You are already logged in. Go to your <a href="' . get_bloginfo( 'url' ) . "/start-new-ras-ds/dashboard" . '\">Dashboard</a><br>';
-		wp_loginout( home_url() );
+		echo 'You are already logged in.<br><br> <a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a><br><br>';
 	}
 }
 
