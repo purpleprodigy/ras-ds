@@ -24,12 +24,7 @@
 			<a class="btn btn-primary mar-r-1" href="/workbook">Go to the workbook</a>
 		</div>
 
-		<?php if ( $content['comparison'] ) { ?>
-			echo <h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed Tests</h2>
-		<?php } else { ?>
-			<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
 
-		<?php } ?>
 
 		<?php
 
@@ -40,6 +35,14 @@
 			$content = GFP_SydneyUni_RASDS::get_results_page_content( $entry, $fields );
 
 			?>
+
+			<?php if ( $content['comparison'] ) { ?>
+				echo <h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed Tests</h2>
+			<?php } else { ?>
+				<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
+
+			<?php } ?>
+
 			<div class="mar-b-5 <?php echo $content['bar_chart']['class'] ?>">
 				<?php echo $content['bar_chart']['output'] ?>
 			</div>
