@@ -60,14 +60,14 @@ var GFP_RASDS_Bar = {
 
             view.setColumns([0, 1,
                 {
-                    calc: function ( data_table, rowNum ) { return ( data_table.getValue(rowNum, 1) * 100 ) + '%'},
+                    calc: function ( data_table, rowNum ) { return ( Math.round( data_table.getValue(rowNum, 1) * 100 ) ) + '%'},
                     sourceColumn: 1,
                     type: "string",
                     role: "annotation"
                 },
                 2,
                 {
-                    calc: function ( data_table, rowNum ) { return ( data_table.getValue(rowNum, 2) * 100 ) + '%'},
+                    calc: function ( data_table, rowNum ) { return ( Math.round( data_table.getValue(rowNum, 2) * 100 ) ) + '%'},
                     sourceColumn: 2,
                     type: "string",
                     role: "annotation"

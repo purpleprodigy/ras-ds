@@ -4,7 +4,7 @@
  * Plugin Name: RAS-DS Gravity Forms Customizations
  * Plugin URI: https://gravityplus.pro
  * Description: Gravity Forms and GF Add-On customizations
- * Version: 1.0.0.beta1
+ * Version: 1.0.0
  * Author: gravity+
  * Author URI: https://gravityplus.pro/
  * License:     GPL-2.0+
@@ -31,7 +31,7 @@
  * @link      https://gravityplus.pro
  * @copyright 2016 gravity+
  *
- * last updated: May 25, 2016
+ * last updated: June 15, 2016
  */
 
 // If this file is called directly, abort.
@@ -67,8 +67,6 @@ class GFP_SydneyUni_RASDS {
 
 		add_filter( 'gravityview_field_entry_link', array( $this, 'gravityview_field_entry_link' ), 10, 4 );
 
-		add_filter( 'gravityview_use_cache', '__return_false' ); //TODO remove after finished testing
-
 		add_filter( 'gform_entry_meta', array( $this, 'gform_entry_meta' ), 100, 2 );
 
 		add_filter( 'gravityview_search_criteria', array( $this, 'gravityview_search_criteria' ), 200, 3 );
@@ -87,8 +85,6 @@ class GFP_SydneyUni_RASDS {
 		add_filter( 'gravityview/single/title/out_loop', array( $this, 'gravityview_single_title_out_loop' ) );
 
 		add_filter( 'gravityview_field_entry_value', array( $this, 'gravityview_field_entry_value' ), 10, 4 );
-
-		//add_filter( 'gravityview/field_output/context/value', array( $this, 'gravityview_field_output_context_value'), 10, 2 );
 
 		add_action( 'template_redirect', array( $this, 'template_redirect' ) );
 
@@ -628,31 +624,6 @@ class GFP_SydneyUni_RASDS {
 	}
 
 	/**
-	 * Send field output value as JSON
-	 *
-	 * @since 1.0.0
-	 *
-	 * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
-	 *
-	 * @param $value
-	 * @param $args
-	 *
-	 * @return mixed|string|void
-	 */
-	public function gravityview_field_output_context_value( $value, $args ) {
-
-		$gravityview_view = GravityView_View::getInstance();
-
-		if ( '352' == $gravityview_view->view_id && GravityView_frontend::is_single_entry() && 'single_table-columns' == $args['zone_id'] ) {
-
-			$value = json_encode( $value );
-
-		}
-
-		return $value;
-	}
-
-	/**
 	 * Render bar chart on results page
 	 *
 	 * @since 1.0.0
@@ -718,23 +689,25 @@ class GFP_SydneyUni_RASDS {
 			}
 
 			$chart_options = array(
-				'vAxis'   => array(
+				'vAxis'     => array(
 					'format' => 'percent',
 					'ticks'  => array( 25 / 100, 50 / 100, 75 / 100, 100 / 100 )
 				),
-				'colors'  => array( '#CE3D20', '#8EB304' ),
-				'width'   => 700,
-				'height'  => 500,
-				'legend'  => array( 'position' => 'none' ),
-				'hAxis'   => array( 'showTextEvery' => '1' ),
-				'tooltip' => array( 'trigger' => 'none' ),
+				'colors'    => array( '#CE3D20', '#8EB304' ),
+				'width'     => 700,
+				'height'    => 500,
+				'legend'    => array( 'position' => 'none' ),
+				'hAxis'     => array( 'showTextEvery' => '1' ),
+				'tooltip'   => array( 'trigger' => 'none' ),
 				'chartArea' => array( 'backgroundColor' => array( 'stroke' => '#666', 'strokeWidth' => 1 ) ),
-				'segmented'  => ! empty( $second_entry_id )
+				'segmented' => ! empty( $second_entry_id )
 			);
 
 			if ( ! empty( $second_entry_id ) ) {
 
 				$chart_options['legend']['position'] = 'top';
+
+				$chart_options['bar']['groupWidth'] = '95%';
 
 			}
 
@@ -790,7 +763,7 @@ class GFP_SydneyUni_RASDS {
 				$bar_chart_data['rows'][]['c'] = array(
 					array( 'v' => $label ),
 					array( 'v' => $number ),
-					array( 'v' => $number * 100 . '%' )
+					array( 'v' => round( $number * 100 ) . '%' )
 				);
 
 			}
