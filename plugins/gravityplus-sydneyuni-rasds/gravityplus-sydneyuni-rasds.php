@@ -476,6 +476,12 @@ class GFP_SydneyUni_RASDS {
 
 					if ( ! empty( $table ) ) {
 
+						if ( ! empty( $row ) ) {
+							$table['rows'][] = $row;
+						}
+
+						unset( $row );
+
 						$tables[] = $table;
 
 						unset( $table );
@@ -597,6 +603,10 @@ class GFP_SydneyUni_RASDS {
 
 			unset( $field_output );
 
+		}
+
+		if ( ! empty( $row ) ) {
+			$table['rows'][] = $row;
 		}
 
 		$tables[] = $table;
