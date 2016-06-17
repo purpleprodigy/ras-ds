@@ -97,9 +97,9 @@
 							<tr>
 								<td><?php echo $row['question'] ?></td>
 								<td><?php echo $row['score'] ?></td>
-								<td class="results-comment"><?php echo $row['comment']['class'] ?></td>
+								<td class="results-comment"><?php echo $row['comment'] ?></td>
 								<td><?php echo $row['comparison_score'] ?></td>
-								<td class="results-comment"><?php echo $row['comparison_comment']['class'] ?></td>
+								<td class="results-comment"><?php echo $row['comparison_comment'] ?></td>
 							</tr>
 
 						<?php } else { ?>
