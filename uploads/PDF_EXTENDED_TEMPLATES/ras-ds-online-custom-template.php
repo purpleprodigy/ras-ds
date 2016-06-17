@@ -278,11 +278,6 @@ $form = RGFormsModel::get_form_meta($form_id);
 			        <td><em>{Comment:69}</em></td>
 		        </tr>
 		        <tr>
-			        <td><span id="q32-question">32. I have people that I can count on</span></td>
-			        <td>{32: I have people that I can count on:72:value}</td>
-			        <td><em>{Comment:73}</em></td>
-		        </tr>
-		        <tr>
 			        <td><b>Score:</b></td>
 			        <td><b>{Total 3:88}</b></td>
 			        <td></td>
@@ -308,6 +303,11 @@ $form = RGFormsModel::get_form_meta($form_id);
 		        </tr>
 		        </thead>
 		        <tbody>
+		        <tr>
+			        <td><span id="q32-question">32. I have people that I can count on</span></td>
+			        <td>{32: I have people that I can count on:72:value}</td>
+			        <td><em>{Comment:73}</em></td>
+		        </tr>
 		        <tr>
 			        <td><span id="q33-question">33. Even when I don’t believe in myself, other people do</span></td>
 			        <td>{33: Even when I don’t believe in myself, other people do:74:value}</td>
