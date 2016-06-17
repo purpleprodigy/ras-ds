@@ -17,7 +17,7 @@
 		<div class="mar-b-4">
 			<a class="btn btn-primary mar-r-1" href="javascript:void()" onclick="window.print()">Print</a>
 			<a class="btn btn-primary mar-r-1"
-			   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php">PDF</a>
+			   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php" target="_blank">PDF</a>
 			<a class="btn btn-primary mar-r-1" id="rasds-email-entry"
 			   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?>">Email</a>
 			<a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a>
@@ -174,7 +174,7 @@
 			<div class="mar-b-4">
 				<a class="btn btn-primary mar-r-1" href="javascript:void()" onclick="window.print()">Print</a>
 				<a class="btn btn-primary mar-r-1"
-				   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php">PDF</a>
+				   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php" target="_blank">PDF</a>
 				<a class="btn btn-primary mar-r-1" id="rasds-email-entry"
 				   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?>">Email</a>
 				<a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a>
