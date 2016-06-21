@@ -243,9 +243,11 @@ var GFP_RASDS_Bar = {
 
         var querystring_params = gfp_rasds_get_querystring_vars();
 
+        var gvid = querystring_params['gvid'];
+
         var entry_id = querystring_params['rasdsgventry'];
 
-        link_obj.attr('href', '/rasds/dashboard/entry/' + 'rasdsgventry=' + entry_id);
+        link_obj.attr('href', '/rasds/dashboard/entry/' + '?rasdsgventry=' + entry_id + '?gvid=' + gvid);
 
     }
 
