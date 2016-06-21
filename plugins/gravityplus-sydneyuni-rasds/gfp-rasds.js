@@ -228,15 +228,24 @@ var GFP_RASDS_Bar = {
      *
      * @param link_obj
      */
+//     function gfp_rasds_set_send_to_second_email_link(link_obj) {
+//
+//         var querystring_params = gfp_rasds_get_querystring_vars();
+//
+//         var entry_id = querystring_params['rasdsgventry'];
+//
+//         var link_href = link_obj.attr('href');
+//
+//         link_obj.attr('href', link_href + '?rasdsgventry=' + entry_id);
+//
+//     }
     function gfp_rasds_set_send_to_second_email_link(link_obj) {
 
         var querystring_params = gfp_rasds_get_querystring_vars();
 
         var entry_id = querystring_params['rasdsgventry'];
 
-        var link_href = link_obj.attr('href');
-
-        link_obj.attr('href', link_href + '?rasdsgventry=' + entry_id);
+        link_obj.attr('href', '/rasds/dashboard/entry/' + '?rasdsgventry=' + entry_id);
 
     }
 
