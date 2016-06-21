@@ -220,38 +220,6 @@ var GFP_RASDS_Bar = {
     }
 
     /**
-     * Add entry ID to Send to Second Email button link
-     *
-     * @since 1.0.0
-     *
-     * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
-     *
-     * @param link_obj
-     */
-//     function gfp_rasds_set_send_to_second_email_link(link_obj) {
-//
-//         var querystring_params = gfp_rasds_get_querystring_vars();
-//
-//         var entry_id = querystring_params['rasdsgventry'];
-//
-//         var link_href = link_obj.attr('href');
-//
-//         link_obj.attr('href', link_href + '?rasdsgventry=' + entry_id);
-//
-//     }
-    function gfp_rasds_set_send_to_second_email_link(link_obj) {
-
-        var querystring_params = gfp_rasds_get_querystring_vars();
-
-        var gvid = querystring_params['gvid'];
-
-        var entry_id = querystring_params['rasdsgventry'];
-
-        link_obj.attr('href', '/rasds/dashboard/entry/' + '?rasdsgventry=' + entry_id + '?gvid=' + gvid);
-
-    }
-
-    /**
      * Validate selected comparison options
      *
      * @since 1.0.0
