@@ -16,8 +16,10 @@ themes/ras-ds/config
 themes/ras-ds/gulpfile.js
 themes/ras-ds/package.json
 
-# GravityPDF output files
+# GravityPDF output, font and tmp files
 uploads/PDF_EXTENDED_TEMPLATES/output/
+uploads/PDF_EXTENDED_TEMPLATES/tmp/
+uploads/PDF_EXTENDED_TEMPLATES/font/
 
 # Updraft backups
 updraft/
