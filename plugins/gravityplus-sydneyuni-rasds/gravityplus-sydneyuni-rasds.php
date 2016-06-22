@@ -845,9 +845,9 @@ class GFP_SydneyUni_RASDS {
 
 		$second_entry = GFAPI::get_entry( $second_entry_id );
 
-		$segment1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
+		$segment1 = GVCommon::format_date( $entry['label'], array( 'format' => 'j F Y' ) );
 
-		$segment2 = GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
+		$segment2 = GVCommon::format_date( $second_entry['label'], array( 'format' => 'j F Y' ) );
 
 		$data['segments'] = array( $segment1, $segment2 );
 
