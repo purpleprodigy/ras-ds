@@ -1,9 +1,9 @@
 {
-    "name" 			: "sydneyuni/ras-ds-child-theme",
-    "description" 	: "RAS-DS Genesis Child Theme",
+    "name" 			: "rasds/purpleprodigy-rasds",
+    "description" 	: "RAS-DS Online plugin",
     "type"          : "project",
-    "keywords" 		: ["wordpress", "wp", "theme"],
-    "homepage" 		: "http://sydneyuni.dev",
+    "keywords" 		: ["wordpress", "wp", "plugin", "faq"],
+    "homepage" 		: "http://purpleprodigy.com",
     "license" 		: "GPL-2.0+",
     "authors": [
         {
@@ -14,18 +14,10 @@
     "require": {
         "php" : ">=5.4.0"
     },
-    "require-dev": {},
     "autoload" : {
         "files": [
-            "lib/setup.php",
-
-            "lib/widgets/widget-areas.php",
-
-            "lib/structure/footer.php",
-            "lib/structure/header.php",
-            "lib/structure/nav.php",
-
-            "lib/functions/enqueue-assets.php"
+            "src/helpers.php",
+            "src/shortcode/display_url_param.php"
         ]
     },
     "extra": {

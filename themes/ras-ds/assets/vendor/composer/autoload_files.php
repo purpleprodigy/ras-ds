@@ -12,5 +12,4 @@ return array(
     '944f921a7c6134b627f435fd3bf47550' => $baseDir . '/lib/structure/header.php',
     'ace0751c8de180f0712ad0e378d4ee53' => $baseDir . '/lib/structure/nav.php',
     '01619a481db0aabae4d892da82727469' => $baseDir . '/lib/functions/enqueue-assets.php',
-    '1e13507e4c59e8c7fec06cc0c6d49e2e' => $baseDir . '/lib/functions/helpers.php',
 );
