@@ -38,4 +38,4 @@ require( 'views/index.php' );
  * So if you comment this out, you'll see that it does not render the chart into the
  * <embed> element.  The chart is generated in JavaScript obviously.
  */
-die();
+// die();
