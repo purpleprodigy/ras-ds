@@ -145,21 +145,52 @@ class GFP_SydneyUni_RASDS {
 	 */
 	public function wp_enqueue_scripts() {
 
-		global $post;
-
-		if ( ( ! empty( $_GET['gvid'] ) && '352' == $_GET['gvid'] ) || ! empty( $_GET['rasdsgventry'] ) || 'compare-other-completed-tests' == $post->post_name ) {
-
-			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-
-			wp_enqueue_script( 'gfp_rasds_google_jsapi', 'https://www.google.com/jsapi', array( 'jquery' ), GFP_RASDS_CURRENT_VERSION, true );
-
-			wp_enqueue_script( 'gfp-rasds', GFP_RASDS_URL . "gfp-rasds{$suffix}.js", array(
-				'jquery',
-				'gfp_rasds_google_jsapi'
-			), GFP_RASDS_CURRENT_VERSION, true );
-
+		if ( ! $this->is_valid_webpage_for_assets() ) {
+			return;
 		}
 
+		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+		wp_enqueue_script( 'gfp_rasds_google_jsapi', 'https://www.google.com/jsapi', array( 'jquery' ), GFP_RASDS_CURRENT_VERSION, true );
+
+		wp_enqueue_script( 'gfp-rasds', GFP_RASDS_URL . "gfp-rasds{$suffix}.js", array(
+			'jquery',
+			'gfp_rasds_google_jsapi'
+		), GFP_RASDS_CURRENT_VERSION, true );
+	}
+
+	/**
+	 * Check if the current webpage is valid for the assets to be enqueued.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return bool
+	 */
+	protected function is_valid_webpage_for_assets() {
+		global $post;
+
+//		if ( array_key_exists( 'template', $_GET ) && 'ras-ds-online-custom-template.php' == $_GET['template'] ) {
+//			return true;
+//		}
+
+		if ( array_key_exists( 'gvid', $_GET ) && 352 == (int) $_GET['gvid'] ) {
+			return true;
+		}
+
+		if ( 'compare-other-completed-tests' == $post->post_name ) {
+			return true;
+		}
+
+		if ( array_key_exists( 'rasdsgventry', $_GET ) && $_GET['rasdsgventry'] ) {
+			return true;
+		}
+
+//		return ( ( ! empty( $_GET['gvid'] ) && '352' == $_GET['gvid'] ) ||
+//		         ! empty( $_GET['rasdsgventry'] ) ||
+//		         'compare-other-completed-tests' == $post->post_name
+//				);
+
+		return false;
 	}
 
 
@@ -645,103 +676,216 @@ class GFP_SydneyUni_RASDS {
 	 * @return string
 	 */
 	public function gravityview_fields_custom_content_after( $content ) {
-
 		$gravityview_view = GravityView_View::getInstance();
-
-		if ( '352' == $gravityview_view->view_id && 'rasds-bar-chart' == $gravityview_view->getCurrentFieldSetting( 'custom_class' ) ) {
-
-			$entry = $gravityview_view->getCurrentEntry();
-
-			if ( empty( $_GET['rasdscompare'] ) ) {
-
-				$data = $this->format_bar_chart_data( array(
-					'results' => array(
-						'Doing Things I Value'     => $entry[90] / 100,
-						'Looking Forward'          => $entry[91] / 100,
-						'Mastering My Illness'     => $entry[92] / 100,
-						'Connecting And Belonging' => $entry[93] / 100
-					)
-				) );
-
-			} else {
-
-				$second_entry_id = $_GET['rasdscompare'];
-
-				$second_entry = GFAPI::get_entry( $second_entry_id );
-
-				$segment1 = "Test 1: " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
-
-				$segment2 = "Test 2: " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
-
-				$data['segments'] = array( $segment1, $segment2 );
-
-				$data['results'] = array(
-					'Doing Things I Value'     => array(
-						$segment1 => $entry[90] / 100,
-						$segment2 => $second_entry[90] / 100
-					),
-					'Looking Forward'          => array(
-						$segment1 => $entry[91] / 100,
-						$segment2 => $second_entry[91] / 100
-					),
-					'Mastering My Illness'     => array(
-						$segment1 => $entry[92] / 100,
-						$segment2 => $second_entry[92] / 100
-					),
-					'Connecting And Belonging' => array(
-						$segment1 => $entry[93] / 100,
-						$segment2 => $second_entry[93] / 100
-					)
-				);
-
-				$data = $this->format_bar_chart_data( $data );
-
-			}
-
-			$chart_options = array(
-				'vAxis'     => array(
-					'format' => 'percent',
-					'ticks'  => array( 25 / 100, 50 / 100, 75 / 100, 100 / 100 )
-				),
-				'colors'    => array( '#CE3D20', '#8EB304' ),
-				'width'     => 700,
-				'height'    => 500,
-				'legend'    => array( 'position' => 'none' ),
-				'hAxis'     => array( 'showTextEvery' => '1' ),
-				'tooltip'   => array( 'trigger' => 'none' ),
-				'chartArea' => array( 'backgroundColor' => array( 'stroke' => '#666', 'strokeWidth' => 1 ) ),
-				'segmented' => ! empty( $second_entry_id )
-			);
-
-			if ( ! empty( $second_entry_id ) ) {
-
-				$chart_options['legend']['position'] = 'top';
-
-				$chart_options['bar']['groupWidth'] = '95%';
-
-			}
-
-			$chart_object_info = array(
-				'chart_type' => 'Bar',
-				'id'         => $entry['id'],
-				'data'       => $data,
-				'options'    => $chart_options
-			);
-
-			$formatted_chart_object_info = $this->format_chart_object_info_for_js( $chart_object_info );
-
-			$script = 'gfp_rasds_chart_js.charts.push(' . wp_json_encode( $formatted_chart_object_info ) . ');';
-
-			$content = "<span id='gfp-rasds-{$chart_object_info['chart_type']}_chart_{$chart_object_info['id']}' class='gfp-rasds-{$chart_object_info['chart_type']}_chart'></span><script type='text/javascript'>jQuery(document).on('gfp_rasds_object_declared', function(){{$script}});</script>";
-			$content .= "<input type='hidden' id='gravityview-entry-id' value='{$entry['id']}' />";
-
-			$ajaxurl = admin_url( 'admin-ajax.php', isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
-			$content .= "<input type='hidden' id='ajaxurl' value='{$ajaxurl}' />";
-
+		if ( ! $this->is_bar_chart_view( $gravityview_view ) ) {
+			return $content;
 		}
 
-		return $content;
+		$entry = $gravityview_view->getCurrentEntry();
+		$data  = $this->get_formatted_data_for_bar_chart( $entry );
 
+		return $this->get_chart_html_markup( $data, $entry );
+	}
+
+	/**
+	 * Checks if this view is for a bar chart.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param GravityView_View $gravityview_view
+	 *
+	 * @return bool
+	 */
+	function is_bar_chart_view( $gravityview_view ) {
+		return '352' == $gravityview_view->view_id && 'rasds-bar-chart' == $gravityview_view->getCurrentFieldSetting( 'custom_class' );
+	}
+
+	/**
+	 * Fetches the bar chart data and then runs it through the formatter.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $entry
+	 * @param array $data
+	 *
+	 * @return array
+	 */
+	public function get_formatted_data_for_bar_chart( $entry, $data = array() ) {
+		$data = empty( $data ) ? $this->get_data_from_view( $entry ) : $data;
+		$data = $this->format_bar_chart_data( $data );
+
+		return $data;
+	}
+
+	/**
+	 * Builds the Bar Chart's HTML markup and then returns it. (c
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $data
+	 * @param array $entry
+	 * @param bool $return_html When true, the HTML is returned to the caller.
+	 *
+	 * @return string
+	 */
+	public function get_chart_html_markup( $data, $entry, $return_html = true ) {
+		$chart_object_info = $this->get_chart_options_info( $data, $entry );
+
+		$formatted_chart_object_info = $this->format_chart_object_info_for_js( $chart_object_info );
+		
+		$ajaxurl = admin_url( 'admin-ajax.php', isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
+
+		$view_file = 'views/bar-chart.php';
+
+		if ( $return_html ) {
+
+			ob_start();
+			include( $view_file );
+
+			return ob_get_clean();
+		}
+
+		include( $view_file );
+	}
+
+	/**
+	 * Get chart options info.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $data
+	 * @param array $entry
+	 *
+	 * @return array
+	 */
+	protected function get_chart_options_info( $data, array $entry ) {
+		$second_entry_id = $this->get_second_entry_id();
+
+		$chart_options = array(
+			'vAxis'     => array(
+				'format' => 'percent',
+				'ticks'  => array( 25 / 100, 50 / 100, 75 / 100, 100 / 100 )
+			),
+			'colors'    => array( '#CE3D20', '#8EB304' ),
+			'width'     => 700,
+			'height'    => 500,
+			'legend'    => array( 'position' => 'none' ),
+			'hAxis'     => array( 'showTextEvery' => '1' ),
+			'tooltip'   => array( 'trigger' => 'none' ),
+			'chartArea' => array( 'backgroundColor' => array( 'stroke' => '#666', 'strokeWidth' => 1 ) ),
+			'segmented' => ! empty( $second_entry_id )
+		);
+
+		if ( ! empty( $second_entry_id ) ) {
+
+			$chart_options['legend']['position'] = 'top';
+
+			$chart_options['bar']['groupWidth'] = '95%';
+		}
+
+		return array(
+			'chart_type' => 'Bar',
+			'id'         => $entry['id'],
+			'data'       => $data,
+			'options'    => $chart_options
+		);
+	}
+
+	/**
+	 * Get data from the view.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $entry
+	 *
+	 * @return array
+	 */
+	public function get_data_from_view( array $entry ) {
+
+		if ( empty( $_GET['rasdscompare'] ) ) {
+			return $this->get_single_data_results_from_entry( $entry );
+		}
+
+		return $this->get_dual_data_results_from_entry( $entry );
+	}
+
+	/**
+	 * Get Single data results from the entry.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $entry
+	 *
+	 * @return array
+	 */
+	public function get_single_data_results_from_entry( array $entry ) {
+
+		return array(
+			'results'      => array(
+				'Doing Things I Value'     => $entry[90] / 100,
+				'Looking Forward'          => $entry[91] / 100,
+				'Mastering My Illness'     => $entry[92] / 100,
+				'Connecting And Belonging' => $entry[93] / 100
+			),
+			'second_entry' => false,
+		);
+	}
+
+	/**
+	 * Get dual data results from the entry.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $entry
+	 *
+	 * @return array
+	 */
+	public function get_dual_data_results_from_entry( array $entry ) {
+		$second_entry_id = $this->get_second_entry_id();
+
+		$second_entry = GFAPI::get_entry( $second_entry_id );
+
+		$segment1 = "Test 1: " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
+
+		$segment2 = "Test 2: " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'F' ) ) . " test - " . GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
+
+		$data['segments'] = array( $segment1, $segment2 );
+
+		$data['results'] = array(
+			'Doing Things I Value'     => array(
+				$segment1 => $entry[90] / 100,
+				$segment2 => $second_entry[90] / 100
+			),
+			'Looking Forward'          => array(
+				$segment1 => $entry[91] / 100,
+				$segment2 => $second_entry[91] / 100
+			),
+			'Mastering My Illness'     => array(
+				$segment1 => $entry[92] / 100,
+				$segment2 => $second_entry[92] / 100
+			),
+			'Connecting And Belonging' => array(
+				$segment1 => $entry[93] / 100,
+				$segment2 => $second_entry[93] / 100
+			)
+		);
+
+		return $data;
+	}
+	
+	/**
+	 * Get the second entry ID, if available.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string|bool Returns false if it does not exist.
+	 */
+	protected function get_second_entry_id() {
+		if ( array_key_exists( 'rasdscompare', $_GET ) && $_GET['rasdscompare'] ) {
+			return $_GET['rasdscompare'];
+		}
+
+		return false;
 	}
 
 	/**
@@ -753,10 +897,9 @@ class GFP_SydneyUni_RASDS {
 	 *
 	 * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
 	 *
-	 * @param $data
-	 * @param $addl_segment
+	 * @param array $data
 	 *
-	 * @return mixed
+	 * @return array
 	 */
 	public static function format_bar_chart_data( $data ) {
 
@@ -829,19 +972,17 @@ class GFP_SydneyUni_RASDS {
 	 */
 	private function format_chart_object_info_for_js( $chart_object_info ) {
 
-		if ( is_array( $chart_object_info ) ) {
+		if ( ! is_array( $chart_object_info ) ) {
+			return $chart_object_info;
+		}
 
-			foreach ( $chart_object_info as $key => $value ) {
+		foreach ( $chart_object_info as $key => $value ) {
 
-				if ( ! is_scalar( $value ) ) {
-
-					continue;
-
-				}
-
-				$chart_object_info[ $key ] = html_entity_decode( (string) $value, ENT_QUOTES, 'UTF-8' );
-
+			if ( ! is_scalar( $value ) ) {
+				continue;
 			}
+
+			$chart_object_info[ $key ] = html_entity_decode( (string) $value, ENT_QUOTES, 'UTF-8' );
 		}
 
 		return $chart_object_info;
