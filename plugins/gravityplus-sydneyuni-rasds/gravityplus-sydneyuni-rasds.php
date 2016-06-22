@@ -434,8 +434,8 @@ class GFP_SydneyUni_RASDS {
 
 			$comparison_entry = GFAPI::get_entry( $comparison_entry_id );
 
-			$test1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
-
+			//	$test1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
+			$test1 = GVCommon::get_field( $fields['test-title'] );
 			$test2 = GVCommon::format_date( $comparison_entry['date_created'], array( 'format' => 'j F Y' ) );
 
 		}
@@ -732,7 +732,7 @@ class GFP_SydneyUni_RASDS {
 		$chart_object_info = $this->get_chart_options_info( $data, $entry );
 
 		$formatted_chart_object_info = $this->format_chart_object_info_for_js( $chart_object_info );
-		
+
 		$ajaxurl = admin_url( 'admin-ajax.php', isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
 
 		$view_file = 'views/bar-chart.php';
@@ -872,7 +872,7 @@ class GFP_SydneyUni_RASDS {
 
 		return $data;
 	}
-	
+
 	/**
 	 * Get the second entry ID, if available.
 	 *
