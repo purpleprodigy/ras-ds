@@ -30,6 +30,12 @@ function enable_login_with_email( $user, $email_or_username, $password ) {
 	return wp_authenticate_username_password( null, $user->user_login, $password );
 }
 
+// Change lost password redirect.
+add_filter( 'lostpassword_redirect', 'my_redirect_home' );
+function my_redirect_home( $lostpassword_redirect ) {
+	return home_url();
+}
+
 // Change Gravity Forms validation message for test form
 add_filter( 'gform_validation_message_1', __NAMESPACE__ . '\change_gravity_forms_validation_message_test_form', 10, 2 );
 function change_gravity_forms_validation_message_test_form( $message, $form ) {
