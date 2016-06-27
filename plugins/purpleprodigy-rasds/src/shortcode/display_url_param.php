@@ -27,8 +27,10 @@ function show_second_email( $attributes, $content ) {
 
 	$attributes = shortcode_atts( $defaults, $attributes, 'display_url_param' );
 
-	// array_key_exists($_GET['second-email'] );
-	$param = $_GET['second-email'];
-	return esc_html( $param );
+	if ( array_key_exists( 'second-email', $_GET ) ) {
+		$param = $_GET['second-email'];
+
+		return esc_html( $param );
+	}
 
 }
