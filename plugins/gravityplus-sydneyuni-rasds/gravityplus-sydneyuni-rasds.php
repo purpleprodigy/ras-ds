@@ -435,7 +435,7 @@ class GFP_SydneyUni_RASDS {
 			$comparison_entry = GFAPI::get_entry( $comparison_entry_id );
 
 		//	$test1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
-			$test1 = GFFormsModel::get_field( 1, 1 );
+			$test1 = GFFormsModel::get_field( $entry['1'], $fields['1'] );
 			
 			$test2 = GVCommon::format_date( $comparison_entry['date_created'], array( 'format' => 'j F Y' ) );
 		}
