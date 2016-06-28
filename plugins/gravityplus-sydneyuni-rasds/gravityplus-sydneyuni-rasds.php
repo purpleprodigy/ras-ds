@@ -434,9 +434,7 @@ class GFP_SydneyUni_RASDS {
 
 			$comparison_entry = GFAPI::get_entry( $comparison_entry_id );
 
-		//	$test1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
 			$test1 = $entry['1'];
-		//	$test2 = GVCommon::format_date( $comparison_entry['date_created'], array( 'format' => 'j F Y' ) );
 			$test2 = $comparison_entry['1'];
 		}
 
@@ -845,9 +843,9 @@ class GFP_SydneyUni_RASDS {
 
 		$second_entry = GFAPI::get_entry( $second_entry_id );
 
-		$segment1 = GVCommon::format_date( $entry['date_created'], array( 'format' => 'j F Y' ) );
+		$segment1 =  $entry['1'];
 
-		$segment2 = GVCommon::format_date( $second_entry['date_created'], array( 'format' => 'j F Y' ) );
+		$segment2 = $second_entry['1'];
 
 		$data['segments'] = array( $segment1, $segment2 );
 
