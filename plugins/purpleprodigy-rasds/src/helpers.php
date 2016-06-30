@@ -11,7 +11,7 @@
 namespace RASDS;
 
 // Automatically login user when they register.
-add_action("gform_user_registered", "autologin", 10, 4);
+add_action('gform_user_registered', __NAMESPACE__ . '\autologin', 10, 4);
 function autologin($user_id, $config, $entry, $password) {
 	wp_set_auth_cookie($user_id, false, '');
 }
