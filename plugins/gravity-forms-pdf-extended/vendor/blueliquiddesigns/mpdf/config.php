@@ -230,7 +230,7 @@ $this->img_dpi = 96; // Default dpi to output images if size not defined
 
 // TEXT SPACING & JUSTIFICATION
 
-$this->useKerning = true;	// Specify whether kerning should be used when CSS font-kerning="auto" used for HTML;
+$this->useKerning = false;	// Specify whether kerning should be used when CSS font-kerning="auto" used for HTML;
 // Also whether kerning should be used in any direct writing e.g. $mpdf->Text();
 $this->justifyB4br = true;	// In justified text, <BR> does not cause the preceding text to be justified in browsers
 // Change to true to force justification (as in MS Word)

@@ -366,124 +366,124 @@ msgstr ""
 msgid "Legacy"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1909, src/helper/Helper_PDF_List_Table.php:637
+#: src/helper/abstract/Helper_Abstract_Options.php:1911, src/helper/Helper_PDF_List_Table.php:637
 msgctxt "Required"
 msgid "needs"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1967
+#: src/helper/abstract/Helper_Abstract_Options.php:1971
 msgid "Template Name"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1969
+#: src/helper/abstract/Helper_Abstract_Options.php:1973
 msgid "Version"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1971
+#: src/helper/abstract/Helper_Abstract_Options.php:1975
 msgid "Description"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1973
+#: src/helper/abstract/Helper_Abstract_Options.php:1977
 msgid "Author"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1975
+#: src/helper/abstract/Helper_Abstract_Options.php:1979
 msgid "Group"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:1977, src/helper/Helper_PDF.php:727
+#: src/helper/abstract/Helper_Abstract_Options.php:1981, src/helper/Helper_PDF.php:727
 msgid "Required PDF Version"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2157
+#: src/helper/abstract/Helper_Abstract_Options.php:2165
 msgid "Unicode"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2185
+#: src/helper/abstract/Helper_Abstract_Options.php:2193
 msgid "Indic"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2195
+#: src/helper/abstract/Helper_Abstract_Options.php:2203
 msgid "Arabic"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2207
+#: src/helper/abstract/Helper_Abstract_Options.php:2215
 msgid "Other"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2311, src/model/Model_Settings.php:619
+#: src/helper/abstract/Helper_Abstract_Options.php:2319, src/model/Model_Settings.php:619
 msgid "User-Defined Fonts"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2449
+#: src/helper/abstract/Helper_Abstract_Options.php:2457
 msgid "Copy"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2451
+#: src/helper/abstract/Helper_Abstract_Options.php:2459
 msgid "Print - Low Resolution"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2453
+#: src/helper/abstract/Helper_Abstract_Options.php:2461
 msgid "Print - High Resolution"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2455
+#: src/helper/abstract/Helper_Abstract_Options.php:2463
 msgid "Modify"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2457
+#: src/helper/abstract/Helper_Abstract_Options.php:2465
 msgid "Annotate"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2459
+#: src/helper/abstract/Helper_Abstract_Options.php:2467
 msgid "Fill Forms"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2461
+#: src/helper/abstract/Helper_Abstract_Options.php:2469
 msgid "Extract"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2463
+#: src/helper/abstract/Helper_Abstract_Options.php:2471
 msgid "Assemble"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2713
+#: src/helper/abstract/Helper_Abstract_Options.php:2721
 msgid "Settings updated."
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:2951, src/helper/abstract/Helper_Abstract_Options.php:2967, src/helper/abstract/Helper_Abstract_Options.php:2983
+#: src/helper/abstract/Helper_Abstract_Options.php:2959, src/helper/abstract/Helper_Abstract_Options.php:2975, src/helper/abstract/Helper_Abstract_Options.php:2991
 msgid "PDF Settings could not be saved. Please enter all required information below."
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4047, src/helper/abstract/Helper_Abstract_Options.php:4049
+#: src/helper/abstract/Helper_Abstract_Options.php:4055, src/helper/abstract/Helper_Abstract_Options.php:4057
 msgid "Select Media"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4051
+#: src/helper/abstract/Helper_Abstract_Options.php:4059
 msgid "Upload File"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4365
+#: src/helper/abstract/Helper_Abstract_Options.php:4373
 msgid "Width"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4367
+#: src/helper/abstract/Helper_Abstract_Options.php:4375
 msgid "Height"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4373
+#: src/helper/abstract/Helper_Abstract_Options.php:4381
 msgid "mm"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4375
+#: src/helper/abstract/Helper_Abstract_Options.php:4383
 msgid "inches"
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_Options.php:4495
+#: src/helper/abstract/Helper_Abstract_Options.php:4503
 msgid "The callback used for the %s setting is missing."
 msgstr ""
 
-#: src/helper/abstract/Helper_Abstract_View.php:263
+#: src/helper/abstract/Helper_Abstract_View.php:285
 msgid "Cannot find file %s"
 msgstr ""
 

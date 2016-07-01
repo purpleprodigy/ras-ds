@@ -57,12 +57,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/GravityPDF/mpdf.git",
-            "reference": "15d57a4c1230b9a2aac5a914b87a8edbbb167041"
+            "reference": "8aa7ca7ec91acb5c5424e1a35205f167e5696e6c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/GravityPDF/mpdf/zipball/15d57a4c1230b9a2aac5a914b87a8edbbb167041",
-            "reference": "15d57a4c1230b9a2aac5a914b87a8edbbb167041",
+            "url": "https://api.github.com/repos/GravityPDF/mpdf/zipball/8aa7ca7ec91acb5c5424e1a35205f167e5696e6c",
+            "reference": "8aa7ca7ec91acb5c5424e1a35205f167e5696e6c",
             "shasum": ""
         },
         "require": {
@@ -76,7 +76,7 @@
         "suggest": {
             "ext-zlib": "Needed for compression of embedded resources, such as fonts"
         },
-        "time": "2016-05-03 23:37:22",
+        "time": "2016-06-28 04:36:02",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
