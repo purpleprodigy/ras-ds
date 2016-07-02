@@ -151,11 +151,8 @@ class GFP_SydneyUni_RASDS {
 
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'gfp_rasds_google_jsapi', 'https://www.google.com/jsapi', array( 'jquery' ), GFP_RASDS_CURRENT_VERSION, true );
-
 		wp_enqueue_script( 'gfp-rasds', GFP_RASDS_URL . "gfp-rasds{$suffix}.js", array(
 			'jquery',
-			'gfp_rasds_google_jsapi'
 		), GFP_RASDS_CURRENT_VERSION, true );
 	}
 
@@ -426,7 +423,6 @@ class GFP_SydneyUni_RASDS {
 		$gravityview_view = GravityView_View::getInstance();
 
 		$comparison = ! empty( $_GET['rasdscompare'] );
-
 
 		if ( $comparison ) {
 
@@ -763,7 +759,7 @@ class GFP_SydneyUni_RASDS {
 		$chart_options = array(
 			'vAxis'     => array(
 				'format' => 'percent',
-				'ticks'  => array( 25 / 100, 50 / 100, 75 / 100, 100 / 100 )
+				'ticks'  => array( 0.00, 0.25, 0.50, 0.75, 1.00 )
 			),
 			'colors'    => array( '#CE3D20', '#8EB304' ),
 			'width'     => 700,

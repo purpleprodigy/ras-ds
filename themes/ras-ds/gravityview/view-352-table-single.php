@@ -7,6 +7,12 @@
  *
  * @global GravityView_View $this
  */
+
+use BrightNucleus\RASDS_Charts\ChartData;
+
+$chart_data = new ChartData();
+$comparison = $chart_data->is_comparison() ? '&rasdscompare=' . $chart_data->get_comparison_id() : '';
+
 ?>
 <?php gravityview_before(); ?>
 
@@ -17,9 +23,9 @@
 		<div class="mar-b-4">
 			<a class="btn btn-primary mar-r-1" href="javascript:void()" onclick="window.print()">Print</a>
 			<a class="btn btn-primary mar-r-1"
-			   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php" target="_blank">PDF</a>
+			   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php<?php echo $comparison; ?>" target="_blank">PDF</a>
 			<a class="btn btn-primary mar-r-1" id="rasds-email-entry"
-			   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?>">Email</a>
+			   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?><?php echo $comparison; ?>">Email</a>
 			<a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a>
 			<a class="btn btn-primary mar-r-1" href="/workbook">Go to the workbook</a>
 		</div>
@@ -182,9 +188,9 @@
 			<div class="mar-b-4">
 				<a class="btn btn-primary mar-r-1" href="javascript:void()" onclick="window.print()">Print</a>
 				<a class="btn btn-primary mar-r-1"
-				   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php" target="_blank">PDF</a>
+				   href="/?gf_pdf=1&fid=1&lid=<?php echo $entry['id']; ?>&template=ras-ds-online-custom-template.php<?php echo $comparison; ?>" target="_blank">PDF</a>
 				<a class="btn btn-primary mar-r-1" id="rasds-email-entry"
-				   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?>">Email</a>
+				   href="/rasds/email?gvid=<?php echo $this->getViewId(); ?>&rasdsgventry=<?php echo $entry['id']; ?><?php echo $comparison; ?>">Email</a>
 				<a class="btn btn-primary mar-r-1" href="/dashboard">Back to My Tracker</a>
 				<a class="btn btn-primary mar-r-1" href="/workbook">Go to the workbook</a>
 			</div>

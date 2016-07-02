@@ -27,14 +27,22 @@
 		 */
 
 		include( 'header.php' );
-		include( 'table-1.php' );
-		include( 'table-2.php' );
-		include( 'table-3.php' );
+
+		$chart_data = new \BrightNucleus\RASDS_Charts\ChartData();
+		if ( $chart_data->is_comparison() ) {
+			$comparison_lead      = RGFormsModel::get_lead( $chart_data->get_comparison_id() );
+			$comparison_form_data = GFPDFEntryDetail::lead_detail_grid_array( $form, $comparison_lead );
+			include( 'table-1-dual.php' );
+			include( 'table-2-dual.php' );
+			include( 'table-3-dual.php' );
+		} else {
+			include( 'table-1-single.php' );
+			include( 'table-2-single.php' );
+			include( 'table-3-single.php' );
+		}
 		include( 'footer.php' );
 
 	endforeach; ?>
 
-	<script type="text/javascript" src="<?php echo 'https://www.google.com/jsapi?ver=' . GFP_RASDS_CURRENT_VERSION; ?>"></script>
-	<script type="text/javascript" src="<?php echo GFP_RASDS_URL . 'gfp-rasds.min.js?ver=' . GFP_RASDS_CURRENT_VERSION; ?>"></script>
 	</body>
 </html>

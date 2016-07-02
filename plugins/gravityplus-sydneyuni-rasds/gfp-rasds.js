@@ -6,129 +6,7 @@
  * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
  */
 
-var gfp_rasds_chart_js = {charts: []};
-jQuery(document).trigger('gfp_rasds_object_declared');
-
-/**
- * Bar Chart
- *
- * Taken from GFChart
- *
- * @since 1.0.0
- *
- * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
- *
- * @param location
- * @param data
- * @constructor
- */
-var GFP_RASDS_Bar = {
-
-    /**
-     * ID of the div where this chart will be rendered
-     */
-    location: '',
-
-    data: '',
-
-    options: '',
-
-    init: function () {
-
-        var obj = this;
-
-        google.load('visualization', '1', {
-            'packages': ['corechart'], 'callback': function () {
-                obj.drawChart()
-            }
-        });
-
-    },
-
-    formatData: function () {
-    },
-
-    drawChart: function () {
-
-        var data_table = new google.visualization.DataTable(this.data);
-
-        var location = document.getElementById(this.location);
-
-        var view = new google.visualization.DataView(data_table);
-
-        if (true == this.options.segmented) {
-
-            view.setColumns([0, 1,
-                {
-                    calc: function ( data_table, rowNum ) { return ( Math.round( data_table.getValue(rowNum, 1) * 100 ) ) + '%'},
-                    sourceColumn: 1,
-                    type: "string",
-                    role: "annotation"
-                },
-                2,
-                {
-                    calc: function ( data_table, rowNum ) { return ( Math.round( data_table.getValue(rowNum, 2) * 100 ) ) + '%'},
-                    sourceColumn: 2,
-                    type: "string",
-                    role: "annotation"
-                }]);
-
-        }
-
-        delete this.options.segmented;
-
-        if ('horizontal' == this.options.bars) {
-
-            var chart = new google.visualization.BarChart(location);
-
-        }
-        else {
-
-            var chart = new google.visualization.ColumnChart(location);
-
-        }
-
-        chart.draw(view, this.options);
-
-        jQuery('#' + this.location).show();
-
-    }
-
-};
-
 (function ($) {
-
-    /**
-     * Draw chart
-     *
-     * @since 1.0.0
-     *
-     * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
-     *
-     * @param chart_type
-     * @param id
-     * @param data
-     * @param options
-     */
-    function gfp_rasds_chart_draw(chart_type, id, data, options) {
-
-        if ('object' == typeof( data )) {
-
-            var chart_object = 'GFP_RASDS_' + chart_type;
-
-            var chart_id = chart_type + '_chart_' + id;
-
-            window[chart_id] = Object.create(this[chart_object], {
-                'location': {value: 'gfp-rasds-' + chart_id},
-                'data': {value: data},
-                'options': {value: options}
-            });
-
-            window[chart_id].init();
-
-        }
-
-    }
 
     /**
      * Trigger notification when Email button is clicked
@@ -215,7 +93,9 @@ var GFP_RASDS_Bar = {
 
         var entry_id = querystring_params['rasdsgventry'];
 
-        link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid);
+        var comparison_id = querystring_params['rasdscompare'];
+
+        link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
 
     }
 
@@ -276,12 +156,6 @@ var GFP_RASDS_Bar = {
     }
 
     $(document).ready(function () {
-
-        for (var i = 0; i < gfp_rasds_chart_js.charts.length; i++) {
-
-            gfp_rasds_chart_draw(gfp_rasds_chart_js.charts[i].chart_type, gfp_rasds_chart_js.charts[i].id, gfp_rasds_chart_js.charts[i].data, gfp_rasds_chart_js.charts[i].options);
-
-        }
 
         var email_button = $('#rasds-email-entry');
 

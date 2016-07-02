@@ -47,7 +47,7 @@
 		<td></td>
 	</tr>
 	<tr>
-		<td><b>Perentage:</b></td>
+		<td><b>Percentage:</b></td>
 		<td><b>{Percent 1:90}%</b></td>
 		<td></td>
 	</tr>
@@ -162,7 +162,7 @@
 		<td></td>
 	</tr>
 	<tr>
-		<td><b>Perentage:</b></td>
+		<td><b>Percentage:</b></td>
 		<td><b>{Percent 2:91}%</b></td>
 		<td></td>
 	</tr>
