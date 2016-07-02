@@ -30,6 +30,9 @@ class ChartData {
 	/** @var array Form entries data */
 	protected $entry;
 
+	/** @var array Comparison form entries data */
+	protected $comparison_entry;
+
 	/** @var GFP_SydneyUni_RASDS Gravity Forms View interpreter */
 	protected $gfv_interpreter;
 
@@ -38,15 +41,19 @@ class ChartData {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param array|null               $entry           Optional. Form entries
-	 *                                                  object.
-	 * @param GFP_SydneyUni_RASDS|null $gfv_interpreter Optional. GravityView
-	 *                                                  interpretation object.
+	 * @param array|int|null           $entry            Optional. Form entries
+	 *                                                   object or ID.
+	 * @param array|int|null           $comparison_entry Optional. Comparison
+	 *                                                   form entries object or
+	 *                                                   ID.
+	 * @param GFP_SydneyUni_RASDS|null $gfv_interpreter  Optional. GravityView
+	 *                                                   interpretation object.
 	 */
-	public function __construct( $entry = null, $gfv_interpreter = null ) {
+	public function __construct( $entry = null, $comparison_entry = null, $gfv_interpreter = null ) {
 		global $gfp_sydneyuni_rasds;
-		$this->gfv_interpreter = $gfv_interpreter ?: $gfp_sydneyuni_rasds;
-		$this->entry           = $entry ?: $this->get_entry();
+		$this->gfv_interpreter  = $gfv_interpreter ?: $gfp_sydneyuni_rasds;
+		$this->entry            = $this->get_entry( $entry );
+		$this->comparison_entry = $this->get_comparison_entry( $comparison_entry );
 	}
 
 	/**
@@ -54,9 +61,18 @@ class ChartData {
 	 *
 	 * @since 1.0.0
 	 *
+	 * @param array|int|null $entry Optional. Form entries object or ID.
+	 *
 	 * @return array Form entry.
 	 */
-	protected function get_entry() {
+	protected function get_entry( $entry = null ) {
+		if ( is_numeric( $entry ) ) {
+			$entry = GFAPI::get_entry( absint( $entry ) );
+		}
+		if ( is_object( $entry ) || is_array( $entry ) ) {
+			return $entry;
+		}
+
 		$gravityview_view = GravityView_View::getInstance();
 		$entry            = $gravityview_view->getCurrentEntry();
 		if ( ! empty( $entry ) ) {
@@ -72,6 +88,59 @@ class ChartData {
 	}
 
 	/**
+	 * Get the comparison form entries object.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array|int|null $entry Optional. Comparison form entries object or
+	 *                              ID.
+	 *
+	 * @return array Form entry.
+	 */
+	protected function get_comparison_entry( $entry = null ) {
+		if ( is_numeric( $entry ) && absint( $entry ) > 0 ) {
+			$entry = GFAPI::get_entry( absint( $entry ) );
+		}
+		if ( is_object( $entry ) || is_array( $entry ) ) {
+			return $entry;
+		}
+
+		$entry = null;
+
+		if ( $this->is_comparison() ) {
+			$entry = GFAPI::get_entry( $this->get_comparison_id() );
+			return $entry;
+		}
+
+		return null;
+	}
+
+	/**
+	 * Check whether the current view is a comparison.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return bool Whether the current view is a comparison.
+	 */
+	public function is_comparison() {
+		return false === empty( $_GET['rasdscompare'] )
+		       || null !== $this->comparison_entry;
+	}
+
+	/**
+	 * Get the ID of the comparison entry.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return int ID of the comparison entry.
+	 */
+	public function get_comparison_id() {
+		return empty( $_GET['rasdscompare'] )
+			? 0
+			: absint( $_GET['rasdscompare'] );
+	}
+
+	/**
 	 * Get the charting data.
 	 *
 	 * @since 1.0.0
@@ -79,9 +148,7 @@ class ChartData {
 	 * @return array Charting data.
 	 */
 	public function get_data() {
-		$data['raw']     = $this->is_comparison()
-			? $this->gfv_interpreter->get_dual_data_results_from_entry( $this->entry )
-			: $this->gfv_interpreter->get_single_data_results_from_entry( $this->entry );
+		$data['raw']     = $this->get_raw_data();
 		$data['values']  = $this->is_comparison()
 			? $this->get_dual_values( $data['raw'] )
 			: $this->get_single_values( $data['raw'] );
@@ -98,14 +165,75 @@ class ChartData {
 	}
 
 	/**
-	 * Check whether the current view is a comparison.
+	 * Get the raw data array.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return bool Whether the current view is a comparison.
+	 * @return array Array of raw data.
 	 */
-	public function is_comparison() {
-		return false === empty( $_GET['rasdscompare'] );
+	protected function get_raw_data() {
+		return $this->is_comparison()
+			? $this->get_dual_raw_data( $this->entry, $this->comparison_entry )
+			: $this->get_single_raw_data( $this->entry );
+	}
+
+	/**
+	 * Get the raw data for a comparison of two entries.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param object|array $entry_a First form entries object to get the raw
+	 *                              data from.
+	 * @param object|array $entry_b Second form entries object to get the raw
+	 *                              data from.
+	 * @return array Array of raw data.
+	 */
+	protected function get_dual_raw_data( $entry_a, $entry_b ) {
+		$segment1 = $entry_a['1'];
+		$segment2 = $entry_b['1'];
+
+		$data['segments'] = [ $segment1, $segment2 ];
+
+		$data['results'] = [
+			'Doing Things I Value'     => [
+				$segment1 => $entry_a[90],
+				$segment2 => $entry_b[90],
+			],
+			'Looking Forward'          => [
+				$segment1 => $entry_a[91],
+				$segment2 => $entry_b[91],
+			],
+			'Mastering My Illness'     => [
+				$segment1 => $entry_a[92],
+				$segment2 => $entry_b[92],
+			],
+			'Connecting And Belonging' => [
+				$segment1 => $entry_a[93],
+				$segment2 => $entry_b[93],
+			],
+		];
+
+		return $data;
+	}
+
+	/**
+	 * Get the raw data for a single entry.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param object|array $entry Form entries object to get the raw data from.
+	 * @return array Array of raw data.
+	 */
+	protected function get_single_raw_data( $entry ) {
+		return [
+			'results'      => [
+				'Doing Things I Value'     => $entry[90],
+				'Looking Forward'          => $entry[91],
+				'Mastering My Illness'     => $entry[92],
+				'Connecting And Belonging' => $entry[93],
+			],
+			'second_entry' => false,
+		];
 	}
 
 	/**
@@ -121,8 +249,8 @@ class ChartData {
 		foreach ( $raw['results'] as $key => $data ) {
 			$values[] = [
 				$this->wrap_key( $key ),
-				absint( $data[ $raw['segments'][0] ] * 100 ),
-				absint( $data[ $raw['segments'][1] ] * 100 ),
+				absint( $data[ $raw['segments'][0] ] ),
+				absint( $data[ $raw['segments'][1] ] ),
 			];
 		}
 		return $values;
@@ -162,7 +290,7 @@ class ChartData {
 		foreach ( $raw['results'] as $key => $data ) {
 			$values[] = [
 				$this->wrap_key( $key ),
-				absint( $data * 100 ),
+				absint( $data ),
 			];
 		}
 		return $values;
@@ -196,18 +324,5 @@ class ChartData {
 	 */
 	protected function get_single_options( $raw ) {
 		return [ ];
-	}
-
-	/**
-	 * Get the ID of the comparison entry.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return int ID of the comparison entry.
-	 */
-	public function get_comparison_id() {
-		return empty( $_GET['rasdscompare'] )
-			? 0
-			: absint( $_GET['rasdscompare'] );
 	}
 }

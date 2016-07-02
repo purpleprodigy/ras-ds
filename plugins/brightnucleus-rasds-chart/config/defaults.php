@@ -100,13 +100,13 @@ $shortcodeManager = [
 	'bn_rasds_chart' => [
 		'view' => BN_RASDS_CHARTS_DIR . '/views/shortcodes/chart.php',
 		'atts' => [
-			'id'        => [
+			'id'            => [
 				'validate' => function ( $att ) {
 					return absint( $att );
 				},
 				'default'  => 0,
 			],
-			'compareTo' => [
+			'comparison_id' => [
 				'validate' => function ( $att ) {
 					return absint( $att );
 				},

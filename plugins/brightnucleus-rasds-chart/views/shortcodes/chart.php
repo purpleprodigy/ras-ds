@@ -20,13 +20,16 @@ use SVGGraph;
 $config = ConfigFactory::create( BN_RASDS_CHARTS_DIR . '/config/defaults.php' )
                        ->getSubConfig( CONFIG_PREFIX, 'Chart' );
 
-$options = $config->getKey( 'options' );
-$data    = ( new ChartData() )->get_data();
-$options = array_merge( $options, $data['options'] );
-$values  = $data['values'];
-$type    = $data['type'];
-$colours = $data['colours'];
-
+$options        = $config->getKey( 'options' );
+$chart_data     = new ChartData(
+	! empty( $atts['id'] ) ? $atts['id'] : null,
+	! empty( $atts['comparison_id'] ) ? $atts['comparison_id'] : null
+);
+$data           = $chart_data->get_data();
+$options        = array_merge( $options, $data['options'] );
+$values         = $data['values'];
+$type           = $data['type'];
+$colours        = $data['colours'];
 $graph          = new SVGGraph(
 	$config->getKey( 'width' ),
 	$config->getKey( 'height' ),

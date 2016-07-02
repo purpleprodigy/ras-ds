@@ -21,11 +21,13 @@
     function gfp_rasds_send_results(e) {
 
         var entry_id = $('#gravityview-entry-id').val();
+        var comparison_id = $('#gravityview-comparison-id').val();
 
         var link = this.href;
 
         $.post($('#ajaxurl').val(), {
             entry_id: entry_id,
+            comparison_id: comparison_id,
             action: 'rasds_send_pdf'
         }).done(function (response) {
 
@@ -93,10 +95,12 @@
 
         var entry_id = querystring_params['rasdsgventry'];
 
-        var comparison_id = querystring_params['rasdscompare'];
-
-        link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
-
+        if ( 'rasdscompare' in querystring_params ) {
+            var comparison_id = querystring_params['rasdscompare'];
+            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
+        } else {
+            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid);
+        }
     }
 
     /**

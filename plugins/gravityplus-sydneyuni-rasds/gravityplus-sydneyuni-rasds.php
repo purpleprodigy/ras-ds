@@ -996,6 +996,8 @@ class GFP_SydneyUni_RASDS {
 
 		$entry_id = rgpost( 'entry_id' );
 
+		$comparison_id = rgpost( 'comparison_id' );
+
 		$entry = GFAPI::get_entry( $entry_id );
 
 		$notification_id = '570d8ba6222a7';

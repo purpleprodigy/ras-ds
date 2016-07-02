@@ -3,9 +3,10 @@
 </h2>
 
 <?php
-	render_bar_chart( $form_data );
+	$id = absint( isset( $_REQUEST['entry_id'] ) ? $_REQUEST['entry_id'] : 0 );
+	$comparison_id = absint( isset( $_REQUEST['comparison_id'] ) ? $_REQUEST['comparison_id'] : 0 );
+	echo do_shortcode( '[bn_rasds_chart id=' . $id . ' comparison_id=' . $comparison_id . ']' );
 ?>
-
 <div class="bg-light-gray pad-y-2 pad-x-2 mar-b-4">
 	<b>Key</b>:
 	<span class="display-inline-block pad-r-1 pad-l-1"><b>1</b> = Untrue</span>
