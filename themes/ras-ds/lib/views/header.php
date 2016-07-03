@@ -12,7 +12,7 @@
 				</div>
 				<div class="col-sm-3 hidden-xs">
 					<div class="text-right">
-						<a href="http://sydney.edu.au/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-nsw.jpg" alt="The University of Sydney - External link"></a>
+						<a href="http://sydney.edu.au/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-nsw-v2.png" alt="The University of Sydney - External link"></a>
 					</div>
 				</div>
 			</div>
