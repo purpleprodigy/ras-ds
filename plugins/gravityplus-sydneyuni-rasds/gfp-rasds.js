@@ -90,13 +90,21 @@
     function gfp_rasds_set_back_to_results_link(link_obj) {
 
         var querystring_params = gfp_rasds_get_querystring_vars();
-
         var gvid = querystring_params['gvid'];
+        var entry_id = 0;
+        var comparison_id = 0;
 
-        var entry_id = querystring_params['rasdsgventry'];
-
+        if ( 'rasdsgventry' in querystring_params ) {
+            entry_id =  querystring_params['rasdsgventry'];
+        }
+        if ( 'entry_id' in querystring_params ) {
+            entry_id =  querystring_params['entry_id'];
+        }
         if ( 'rasdscompare' in querystring_params ) {
-            var comparison_id = querystring_params['rasdscompare'];
+            comparison_id = querystring_params['rasdscompare'];
+        }
+
+        if ( comparison_id > 0 ) {
             link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
         } else {
             link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid);
