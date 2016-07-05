@@ -48,6 +48,8 @@ forms
 
 .gform_wrapper ul li.gfield {
   clear: none !important;
+  margin-top: 0 !important;
+  padding-top: 10px !important;
 }
 
 .rasds-title input { width: 100%; }
@@ -471,4 +473,9 @@ body .gform_wrapper label.gfield_label+div.ginput_container {
 .gform_wrapper li.gfield_error input[type=url],
 .gform_wrapper li.gfield_error textarea {
   border: 1px solid $red !important;
+}
+
+#input_1_106 li label, #input_1_107 li label {
+  display: inline !important;
+  top: 0 !important;
 }
