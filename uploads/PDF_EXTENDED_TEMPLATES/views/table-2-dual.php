@@ -9,11 +9,11 @@
 		<td class="col-sm-5" colspan="2"><?php echo esc_html($comparison_form_data['field']['1']); ?></td>
 	</tr>
 	<tr>
-		<th class="col-sm-7">Question</th>
-		<th class="col-sm-1">Score</th>
-		<th class="col-sm-4">Comment</th>
-		<th class="col-sm-1">Score</th>
-		<th class="col-sm-4">Comment</th>
+		<th class="col-sm-7 compare-results-question">Question</th>
+		<th class="col-sm-1 compare-results-score">Score</th>
+		<th class="col-sm-4 compare-results-comment">Comment</th>
+		<th class="col-sm-1 compare-results-score">Score</th>
+		<th class="col-sm-4 compare-results-comment">Comment</th>
 	</tr>
 	</thead>
 	<tbody>
