@@ -16,6 +16,7 @@ namespace BrightNucleus\RASDS_Charts;
 use BrightNucleus\Config\ConfigInterface;
 use BrightNucleus\Config\ConfigTrait;
 use BrightNucleus\Config\Exception\FailedToProcessConfigException;
+use RGFormsModel;
 
 /**
  * Class PDFFilter.
@@ -31,6 +32,9 @@ use BrightNucleus\Config\Exception\FailedToProcessConfigException;
 class PDFFilter {
 
 	use ConfigTrait;
+
+	const GENERATE_PDF_NOTIFICATION = '570d8ba6222a7';
+	const EMAIL_PDF_NOTIFICATION    = '57676111b7e6c';
 
 	/**
 	 * Instantiate a Plugin object.
@@ -53,6 +57,7 @@ class PDFFilter {
 	 */
 	public function register() {
 		add_filter( 'gfpdf_pdf_html_output', [ $this, 'transform' ], 20, 5 );
+		add_filter( 'gfpdf_pdf_filename', [ $this, 'change_filename' ], 10, 4 );
 	}
 
 	/**
@@ -93,5 +98,50 @@ class PDFFilter {
 		}
 
 		return $html;
+	}
+
+	/**
+	 * Change the file name of the generated PDF.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string       $name Name to modify.
+	 * @param object|array $form GF form
+	 * @param array        $entry
+	 * @param array        $settings
+	 * @return string Modified name.
+	 */
+	public function change_filename( $name, $form, $entry, $settings ) {
+		if ( $settings['id'] !== self::GENERATE_PDF_NOTIFICATION
+		     && $settings['id'] !== self::EMAIL_PDF_NOTIFICATION
+		) {
+			return $name;
+		}
+
+		$entry_id      = isset( $_REQUEST['entry_id'] ) ? absint( $_REQUEST['entry_id'] ) : null;
+		$comparison_id = isset( $_REQUEST['comparison_id'] ) ? absint( $_REQUEST['comparison_id'] ) : null;
+		$chart_data    = new ChartData( $entry_id, $comparison_id );
+		if ( $chart_data->is_comparison() ) {
+			$comparison_entry = RGFormsModel::get_lead( $chart_data->get_comparison_id() );
+			$name             = $this->strip_invalid_characters(
+				$name . '_vs_' . $comparison_entry['id'] . '-' . $comparison_entry[1]
+			);
+		}
+		return $name;
+	}
+
+	/**
+	 * Remove any characters that are invalid in filenames (mostly on Windows
+	 * systems).
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $name The string / name to process
+	 * @return string Filtered name.
+	 */
+	public function strip_invalid_characters( $name ) {
+		$characters = array( '/', '\\', '"', '*', '?', '|', ':', '<', '>' );
+
+		return str_replace( $characters, '_', $name );
 	}
 }

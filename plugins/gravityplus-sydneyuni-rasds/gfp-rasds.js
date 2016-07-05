@@ -104,6 +104,31 @@
     }
 
     /**
+     * Set link for Send to second email address button
+     *
+     * @since 1.0.0
+     *
+     * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
+     *
+     * @param link_obj
+     */
+    function gfp_rasds_set_send_to_second_email_link(link_obj) {
+
+        var querystring_params = gfp_rasds_get_querystring_vars();
+
+        var gvid = querystring_params['gvid'];
+
+        var entry_id = querystring_params['rasdsgventry'];
+
+        if ( 'rasdscompare' in querystring_params ) {
+            var comparison_id = querystring_params['rasdscompare'];
+            link_obj.attr('href', '/rasds/send-results-to-a-second-email-address/?entry_id=' + entry_id + '&rasdscompare=' + comparison_id);
+        } else {
+            link_obj.attr('href', '/rasds/send-results-to-a-second-email-address/?entry_id=' + entry_id);
+        }
+    }
+
+    /**
      * Validate selected comparison options
      *
      * @since 1.0.0
