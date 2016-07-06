@@ -90,6 +90,39 @@
     function gfp_rasds_set_back_to_results_link(link_obj) {
 
         var querystring_params = gfp_rasds_get_querystring_vars();
+        var gvid = querystring_params['gvid'];
+        var entry_id = 0;
+        var comparison_id = 0;
+
+        if ( 'rasdsgventry' in querystring_params ) {
+            entry_id =  querystring_params['rasdsgventry'];
+        }
+        if ( 'entry_id' in querystring_params ) {
+            entry_id =  querystring_params['entry_id'];
+        }
+        if ( 'rasdscompare' in querystring_params ) {
+            comparison_id = querystring_params['rasdscompare'];
+        }
+
+        if ( comparison_id > 0 ) {
+            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
+        } else {
+            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid);
+        }
+    }
+
+    /**
+     * Set link for Send to second email address button
+     *
+     * @since 1.0.0
+     *
+     * @author Naomi C. Bush for gravity+ <naomi@gravityplus.pro>
+     *
+     * @param link_obj
+     */
+    function gfp_rasds_set_send_to_second_email_link(link_obj) {
+
+        var querystring_params = gfp_rasds_get_querystring_vars();
 
         var gvid = querystring_params['gvid'];
 
@@ -97,9 +130,9 @@
 
         if ( 'rasdscompare' in querystring_params ) {
             var comparison_id = querystring_params['rasdscompare'];
-            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid + '&rasdscompare=' + comparison_id);
+            link_obj.attr('href', '/rasds/send-results-to-a-second-email-address/?entry_id=' + entry_id + '&rasdscompare=' + comparison_id);
         } else {
-            link_obj.attr('href', '/rasds/dashboard/entry/' + entry_id + '?gvid=' + gvid);
+            link_obj.attr('href', '/rasds/send-results-to-a-second-email-address/?entry_id=' + entry_id);
         }
     }
 

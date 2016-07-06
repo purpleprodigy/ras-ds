@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/styles.css'; ?>" type="text/css"/>
+		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/print.css'; ?>" type="text/css" media="print"/>
 		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/bootstrap.min.css'; ?>" type="text/css"/>
 		<title>RAS-DS Online</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -26,13 +27,15 @@
 		 *
 		 */
 
-		include( 'header.php' );
-
 		$chart_data = new \BrightNucleus\RASDS_Charts\ChartData();
 		if ( $chart_data->is_comparison() || isset( $_REQUEST['comparison_id'] ) ) {
 			$comparison_id = absint( isset( $_REQUEST['comparison_id'] ) ? $_REQUEST['comparison_id'] : 0 ) ?: $chart_data->get_comparison_id();
 			$comparison_lead      = RGFormsModel::get_lead( $comparison_id );
 			$comparison_form_data = GFPDFEntryDetail::lead_detail_grid_array( $form, $comparison_lead );
+		}
+
+		include( 'header.php' );
+		if ( isset( $comparison_lead ) ) {
 			include( 'table-1-dual.php' );
 			include( 'table-2-dual.php' );
 			include( 'table-3-dual.php' );

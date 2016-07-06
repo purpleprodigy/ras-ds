@@ -1,0 +1,13 @@
+# BPS mod_authz_core IfModule BC
+<IfModule mod_authz_core.c>
+Require ip 103.198.130.57
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+<IfModule mod_access_compat.c>
+<FilesMatch "(.*)$">
+Order Allow,Deny
+Allow from 103.198.130.57
+</FilesMatch>
+</IfModule>
+</IfModule>

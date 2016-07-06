@@ -1,0 +1,17 @@
+BPS SECURITY LOG
+=================
+=================
+
+[Idle Session Logout: 06/07/2016 - 12:53 pm]
+REMOTE_ADDR: 129.78.56.164
+Host Name: natp-s01-129-78-56-164.gw.usyd.edu.au
+SERVER_PROTOCOL: HTTP/1.0
+HTTP_CLIENT_IP: 
+HTTP_FORWARDED: 
+HTTP_X_FORWARDED_FOR: 
+HTTP_X_CLUSTER_CLIENT_IP: 
+REQUEST_METHOD: GET
+HTTP_REFERER: http://ras-ds.purpleprodigy.com/wp-content/uploads/2016/03/ras-ds-workbook-full.pdf
+REQUEST_URI: /wp-content/plugins/bulletproof-security/isl-logout.php
+QUERY_STRING: 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0

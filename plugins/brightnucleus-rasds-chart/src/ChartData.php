@@ -123,7 +123,7 @@ class ChartData {
 	 * @return bool Whether the current view is a comparison.
 	 */
 	public function is_comparison() {
-		return false === empty( $_GET['rasdscompare'] )
+		return 0 !== $this->get_comparison_id()
 		       || null !== $this->comparison_entry;
 	}
 
@@ -135,9 +135,14 @@ class ChartData {
 	 * @return int ID of the comparison entry.
 	 */
 	public function get_comparison_id() {
-		return empty( $_GET['rasdscompare'] )
-			? 0
-			: absint( $_GET['rasdscompare'] );
+		$id = 0;
+		if ( ! empty( $_GET['rasdscompare'] ) ) {
+			$id = absint( $_GET['rasdscompare'] );
+		}
+		if ( ! empty( $_REQUEST['comparison_id'] ) ) {
+			$id = absint( $_REQUEST['comparison_id'] );
+		}
+		return $id;
 	}
 
 	/**
