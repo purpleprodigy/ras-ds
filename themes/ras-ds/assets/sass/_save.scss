@@ -4,6 +4,7 @@ save
 
 .gform_wrapper .form_saved_message,
 .wpum-message.success {
+  color: #000 !important;
   line-height: 1.4 !important;
   border: 0 !important;
   background-color: lighten($olive-lighter, 10%) !important;
