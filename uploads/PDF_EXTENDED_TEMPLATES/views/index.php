@@ -4,7 +4,6 @@
 	<head>
 		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/styles.css'; ?>" type="text/css"/>
 		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/print.css'; ?>" type="text/css" media="print"/>
-		<link rel="stylesheet" href="<?php echo $child_theme_uri . '/assets/css/bootstrap.min.css'; ?>" type="text/css"/>
 		<title>RAS-DS Online</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<script type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
