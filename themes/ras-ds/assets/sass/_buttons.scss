@@ -3,6 +3,7 @@ buttons
 ----------------------------------- */
 
 .btn,
+.button,
 .gform_next_button,
 .gform_button,
 .gform_previous_button,
@@ -33,6 +34,7 @@ buttons
 
 // btn-primary
 
+.button,
 .button-primary,
 .btn-primary,
 .gform_button,
@@ -43,6 +45,7 @@ buttons
   border-color: $red;
 }
 
+.button:focus,
 .btn-primary:focus,
 .gform_button:focus,
 .gform_next_button:focus,
@@ -54,6 +57,7 @@ buttons
   text-decoration: none;
 }
 
+.button:hover,
 .btn-primary:hover,
 .gform_button:hover,
 .gform_next_button:hover {
@@ -62,6 +66,7 @@ buttons
   text-decoration: none;
 }
 
+.button:active,
 .btn-primary:active,
 .gform_button:active,
 .gform_next_button:active,
