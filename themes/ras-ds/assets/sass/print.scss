@@ -2,6 +2,19 @@
 print css
 ----------------------------------- */
 
+body {
+  font-size: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,td {
+  border: 1px solid #888;
+  padding: .2em;
+}
+
 a:link,
 a:visited {
   color: #000;
@@ -29,4 +42,33 @@ a:visited {
   display: none;
   position: absolute;
   left: -5000em;
+}
+
+
+.single-results-question {
+  width: 58% !important;
+}
+
+.single-results-score {
+  width: 8% !important;
+}
+
+.single-results-comment {
+  width: 34% !important;
+}
+
+.compare-results-question {
+  width: 28% !important;
+}
+
+.compare-results-score {
+  width: 5% !important;
+}
+
+.compare-results-comment {
+  width: 17% !important;
+}
+
+.results-comment {
+  font-style: italic !important;
 }

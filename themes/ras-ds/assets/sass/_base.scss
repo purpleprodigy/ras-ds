@@ -67,3 +67,10 @@ a:hover {
 a:active {
   color: darken($red, 20%);
 }
+
+
+// SVG element
+
+svg {
+  max-width: 80% !important;
+}
