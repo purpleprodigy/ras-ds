@@ -20,6 +20,10 @@ themes/ras-ds/package.json
 uploads/PDF_EXTENDED_TEMPLATES/output/
 uploads/PDF_EXTENDED_TEMPLATES/tmp/
 uploads/PDF_EXTENDED_TEMPLATES/font/
+uploads/gravity_forms/
+
+#BPS log files
+bps-backup/
 
 # Updraft backups
 updraft/
