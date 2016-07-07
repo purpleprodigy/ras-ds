@@ -23,11 +23,6 @@ function add_in_favicons() {
 	include( CHILD_THEME_DIR . '/lib/views/favicons.php' );
 }
 
-/**
- * TO DO
- * SHOW LOGIN WIDGET TO LOGGED IN USERS ONLY
-*/
-
 add_action( 'genesis_before_header', __NAMESPACE__ . '\show_login_widget' );
 /**
  * Shows login widget area for logged in users.
