@@ -24,6 +24,7 @@ uploads/gravity_forms/
 
 #BPS log files
 bps-backup/
+bps-backup/logs
 
 # Updraft backups
 updraft/
