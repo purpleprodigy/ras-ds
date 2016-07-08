@@ -33,9 +33,6 @@ class ChartData {
 	/** @var array Comparison form entries data */
 	protected $comparison_entry;
 
-	/** @var GFP_SydneyUni_RASDS Gravity Forms View interpreter */
-	protected $gfv_interpreter;
-
 	/**
 	 * Instantiate a ChartData object.
 	 *
@@ -46,12 +43,9 @@ class ChartData {
 	 * @param array|int|null           $comparison_entry Optional. Comparison
 	 *                                                   form entries object or
 	 *                                                   ID.
-	 * @param GFP_SydneyUni_RASDS|null $gfv_interpreter  Optional. GravityView
-	 *                                                   interpretation object.
 	 */
-	public function __construct( $entry = null, $comparison_entry = null, $gfv_interpreter = null ) {
+	public function __construct( $entry = null, $comparison_entry = null ) {
 		global $gfp_sydneyuni_rasds;
-		$this->gfv_interpreter  = $gfv_interpreter ?: $gfp_sydneyuni_rasds;
 		$this->entry            = $this->get_entry( $entry );
 		$this->comparison_entry = $this->get_comparison_entry( $comparison_entry );
 	}
@@ -66,6 +60,10 @@ class ChartData {
 	 * @return array Form entry.
 	 */
 	protected function get_entry( $entry = null ) {
+		if ( ! class_exists( 'GravityView_View' ) || ! class_exists( 'GFAPI' ) ) {
+			return null;
+		}
+
 		if ( is_numeric( $entry ) ) {
 			$entry = GFAPI::get_entry( absint( $entry ) );
 		}
@@ -98,6 +96,10 @@ class ChartData {
 	 * @return array Form entry.
 	 */
 	protected function get_comparison_entry( $entry = null ) {
+		if ( ! class_exists( 'GFAPI' ) ) {
+			return null;
+		}
+
 		if ( is_numeric( $entry ) && absint( $entry ) > 0 ) {
 			$entry = GFAPI::get_entry( absint( $entry ) );
 		}
