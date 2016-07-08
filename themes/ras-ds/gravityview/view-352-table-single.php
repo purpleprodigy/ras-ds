@@ -43,7 +43,7 @@ $comparison = $chart_data->is_comparison() ? '&rasdscompare=' . $chart_data->get
 			?>
 
 			<?php if ( $content['comparison'] ) { ?>
-				<h2 class="mar-0 mar-b-4 text-9">Compare Last Two Completed RAS-DS</h2>
+				<h2 class="mar-0 mar-b-4 text-9">Compare RAS-DS Results</h2>
 			<?php } else { ?>
 				<?php the_title( '<h2 class="mar-0 mar-b-4 text-9">', '</h2>' ); ?>
 

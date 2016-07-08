@@ -45,5 +45,5 @@ function change_gravity_forms_validation_message_contact_form( $message, $form )
 // Change Gravity Forms validation message for register form
 add_filter( 'gform_validation_message_2', __NAMESPACE__ . '\change_gravity_forms_validation_message_register_form', 10, 2 );
 function change_gravity_forms_validation_message_register_form( $message, $form ) {
-	return "<div class='validation_error'>All fields are required. Missing fields are highlighted below in red." . '</div>';
+	return "<div class='validation_error'>All fields are required. Either missing or already in use fields are highlighted below in red." . '</div>';
 }
