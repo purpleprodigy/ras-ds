@@ -1109,6 +1109,17 @@ class Model_PDF extends Helper_Abstract_Model {
 	}
 
 	/**
+	 * Triggered after the Gravity Form entry is updated
+	 *
+	 * @param array $form
+	 * @param int $entry_id
+	 */
+	public function cleanup_pdf_after_submission( $form, $entry_id ) {
+		$entry = $this->gform->get_entry( $entry_id );
+		$this->cleanup_pdf( $entry, $form );
+	}
+
+	/**
 	 * Clean-up any PDFs stored on disk before we resend any notifications
 	 *
 	 * @param array $form The Gravity Forms object
@@ -1268,19 +1279,12 @@ class Model_PDF extends Helper_Abstract_Model {
 		/* Merge in the meta data and survey, quiz and poll data */
 		$data = array_replace_recursive( $data, $form_meta, $quiz, $survey, $poll );
 
-		/**
+		/*
 		 * Loop through the form data, call the correct field object and
 		 * save the data to our $data array
 		 */
-		$has_product_fields = false;
-
 		if ( isset( $form['fields'] ) ) {
 			foreach ( $form['fields'] as $field ) {
-
-				/* Skip over product fields as they will be grouped at the end */
-				if ( GFCommon::is_product_field( $field->type ) ) {
-					$has_product_fields = true;
-				}
 
 				/* Skip over captcha, password and page fields */
 				$fields_to_skip = apply_filters( 'gfpdf_form_data_skip_fields', array(
@@ -1305,7 +1309,7 @@ class Model_PDF extends Helper_Abstract_Model {
 		}
 
 		/* Load our product array if products exist */
-		if ( $has_product_fields ) {
+		if ( ! $products->is_empty() ) {
 			$data = array_replace_recursive( $data, $products->form_data() );
 		}
 
@@ -1371,7 +1375,7 @@ class Model_PDF extends Helper_Abstract_Model {
 		$data['date_created_usa'] = GFCommon::format_date( $entry['date_created'], false, 'n/j/Y', false );
 
 		/* Include page names */
-		$data['pages'] = $form['pagination']['pages'];
+		$data['pages'] = ( isset( $form['pagination']['pages'] ) ? $form['pagination']['pages'] : array());
 
 		/* Add misc fields */
 		$data['misc']['date_time'] = GFCommon::format_date( $entry['date_created'], false, 'Y-m-d H:i:s', false );

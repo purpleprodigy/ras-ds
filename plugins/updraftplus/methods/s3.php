@@ -215,6 +215,7 @@ class UpdraftPlus_BackupModule_s3 {
 			case 'eu-central-1':
 				$endpoint = 's3-'.$region.'.amazonaws.com';
 				break;
+			case 'ap-south-1':
 			case 'cn-north-1':
 				$endpoint = 's3.'.$region.'.amazonaws.com.cn';
 				break;
@@ -489,7 +490,7 @@ class UpdraftPlus_BackupModule_s3 {
 	}
 	
 	// The purpose of splitting this into a separate method, is to also allow listing with a different path
-	public function listfiles_with_path($path, $match = 'backup_') {
+	public function listfiles_with_path($path, $match = 'backup_', $include_subfolders = false) {
 		
 		$bucket_name = untrailingslashit($path);
 		$bucket_path = '';
@@ -498,7 +499,7 @@ class UpdraftPlus_BackupModule_s3 {
 			$bucket_name = $bmatches[1];
 			$bucket_path = trailingslashit($bmatches[2]);
 		}
-		
+
 		$config = $this->get_config();
 		
 		global $updraftplus;
@@ -537,7 +538,7 @@ class UpdraftPlus_BackupModule_s3 {
 			}
 		}
 		*/
-		
+
 		$bucket = $s3->getBucket($bucket_name, $bucket_path.$match);
 
 		if (!is_array($bucket)) return array();
@@ -552,7 +553,7 @@ class UpdraftPlus_BackupModule_s3 {
 				if (0 !== strpos($object['name'], $bucket_path)) continue;
 				$object['name'] = substr($object['name'], strlen($bucket_path));
 			} else {
-				if (false !== strpos($object['name'], '/')) continue;
+				if (!$include_subfolders && false !== strpos($object['name'], '/')) continue;
 			}
 
 			$result = array('name' => $object['name']);
@@ -945,7 +946,8 @@ class UpdraftPlus_BackupModule_s3 {
 			printf(__("Failure: We could not successfully access or create such a bucket. Please check your access credentials, and if those are correct then try another bucket name (as another %s user may already have taken your name).",'updraftplus'), $whoweare);
 			
 			if (!empty($this->s3_error)) echo "\n\n".sprintf(__('The error reported by %s was:', 'updraftplus'), $whoweare).' '.$this->s3_error;
-
+			if ('s3' == $config['key'] && 'AK' != substr($key, 0, 2)) echo "\n\n".sprintf(__('The AWS access key looks to be wrong (valid %s access keys begin with "AK")', 'updraftplus'), $whoweare);
+		
 		} else {
 		
 			$try_file = md5(rand());

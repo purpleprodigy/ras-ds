@@ -71,3 +71,45 @@ HTTP_REFERER: http://ras-ds.purpleprodigy.com/wp-admin/profile.php
 REQUEST_URI: /wp-content/plugins/bulletproof-security/isl-logout.php
 QUERY_STRING: 
 HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0
+
+[Idle Session Logout: 11/07/2016 - 10:33 am]
+REMOTE_ADDR: 129.78.56.165
+Host Name: natp-s01-129-78-56-165.gw.usyd.edu.au
+SERVER_PROTOCOL: HTTP/1.0
+HTTP_CLIENT_IP: 
+HTTP_FORWARDED: 
+HTTP_X_FORWARDED_FOR: 
+HTTP_X_CLUSTER_CLIENT_IP: 
+REQUEST_METHOD: GET
+HTTP_REFERER: http://ras-ds.purpleprodigy.com/rasds/dashboard/entry/344?gvid=352&rasdscompare=259
+REQUEST_URI: /wp-content/plugins/bulletproof-security/isl-logout.php
+QUERY_STRING: 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0
+
+[Idle Session Logout: 11/07/2016 - 12:10 pm]
+REMOTE_ADDR: 116.240.9.162
+Host Name: 162.9-240-116.dynamic.dsl.syd.iprimus.net.au
+SERVER_PROTOCOL: HTTP/1.0
+HTTP_CLIENT_IP: 
+HTTP_FORWARDED: 
+HTTP_X_FORWARDED_FOR: 
+HTTP_X_CLUSTER_CLIENT_IP: 
+REQUEST_METHOD: GET
+HTTP_REFERER: http://ras-ds.purpleprodigy.com/contact
+REQUEST_URI: /wp-content/plugins/bulletproof-security/isl-logout.php
+QUERY_STRING: 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+
+[Idle Session Logout: 11/07/2016 - 3:47 pm]
+REMOTE_ADDR: 129.78.56.165
+Host Name: natp-s01-129-78-56-165.gw.usyd.edu.au
+SERVER_PROTOCOL: HTTP/1.0
+HTTP_CLIENT_IP: 
+HTTP_FORWARDED: 
+HTTP_X_FORWARDED_FOR: 
+HTTP_X_CLUSTER_CLIENT_IP: 
+REQUEST_METHOD: GET
+HTTP_REFERER: http://ras-ds.purpleprodigy.com/rasds/results-sent?second-email=justin.scanlan%40sswahs.nsw.gov.au&rasdsgventry=344&rasdscompare=259&gvid=352
+REQUEST_URI: /wp-content/plugins/bulletproof-security/isl-logout.php
+QUERY_STRING: 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0
