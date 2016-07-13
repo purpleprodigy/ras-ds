@@ -1,4 +1,21 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.0-beta-2.4
+    - Fixed an issue with the form submission where previously saved values are not deleted when subsequently hidden by conditional logic.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.0-beta-2.3
+    - Added the gform_partialentries_post_{$event} hook enabling custom actions to be performed once a partial entry has been saved or updated. See https://www.gravityhelp.com/documentation/article/gform_partialentries_post_event/
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.0-beta-2.2
+    - Fixed an issue which caused the form to be validated twice during page changes.
+    - Fixed an issue which caused GFFormDisplay::is_last_page() to return an incorrect result causing payment add-ons to perform credit card field validation on the wrong page.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.0-beta-2.1
+    - Updated to set entry meta (e.g. Quiz Score Total) when a partial entry is saved/updated.
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.0-beta-2
     - Added support for Gravity Forms 2.0-beta-2
     - Added the Last Saved date and link to the entry detail page.

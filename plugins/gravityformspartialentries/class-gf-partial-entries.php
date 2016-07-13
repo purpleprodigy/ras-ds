@@ -370,7 +370,7 @@ class GF_Partial_Entries extends GFFeedAddOn {
 
 
 	/**
-	 * Saves the entry if the condtions are met.
+	 * Saves the entry if the conditions are met.
 	 *
 	 * @param $form_id
 	 *
@@ -381,6 +381,8 @@ class GF_Partial_Entries extends GFFeedAddOn {
 		if ( ! isset( $_POST['partial_entry_id'] ) ) {
 			return false;
 		}
+		
+		$this->log_debug( __METHOD__ . '() Running.' );
 
 		$partial_entry_id = sanitize_key( rgpost( 'partial_entry_id' ) );
 
@@ -412,7 +414,8 @@ class GF_Partial_Entries extends GFFeedAddOn {
 			if ( is_wp_error( $result ) ) {
 				$message = 'Error: ' . $result->get_error_message();
 			} else {
-				$message = "Success. partial_entry_id = {$partial_entry_id}. Entry id = {$result}.";
+				$partial_entry['id'] = $result;
+				$message             = "Success. partial_entry_id = {$partial_entry_id}. Entry id = {$result}.";
 			}
 			$this->log_debug( __METHOD__ . '(): Saving new partial entry. ' . $message );
 		} else {
@@ -437,7 +440,8 @@ class GF_Partial_Entries extends GFFeedAddOn {
 				if ( is_wp_error( $result ) ) {
 					$message = 'Error: ' . $result->get_error_message();
 				} else {
-					$message = "Success. partial_entry_id = {$partial_entry_id}. Entry id = {$result}.";
+					$partial_entry['id'] = $result;
+					$message             = "Success. partial_entry_id = {$partial_entry_id}. Entry id = {$result}.";
 				}
 				$this->log_debug( __METHOD__ . '(): Saving new partial entry. ' . $message );
 			} else {
@@ -457,6 +461,20 @@ class GF_Partial_Entries extends GFFeedAddOn {
 
 		if ( ! is_wp_error( $result ) && $result ) {
 			GFAPI::send_notifications( $form, $partial_entry, $notification_event );
+
+			$event = str_replace( 'partial_', '', $notification_event );
+
+			/**
+			 * Perform a custom action when the partial entry has been saved or updated.
+			 *
+			 * The dynamic part of the hook name contains the event which occurred; entry_saved or entry_updated.
+			 * 
+			 * @param array $partial_entry The partial entry object.
+			 * @param array $form The form object used to process this partial entry.
+			 * 
+			 * @see https://www.gravityhelp.com/documentation/article/gform_partialentries_post_event/
+			 */
+			do_action( "gform_partialentries_post_{$event}", $partial_entry, $form );
 		}
 
 		return $partial_entry_id;
@@ -486,16 +504,16 @@ class GF_Partial_Entries extends GFFeedAddOn {
 		$total_fields              = 0;
 		$required_fields           = 0;
 
-		$page_number = GFFormDisplay::get_source_page( $form['id'] );
-
+		$unset_keys = array();
+		$ignore_types  = array(
+			'fileupload',
+			'creditcard',
+		);
+		
 		foreach ( $form['fields'] as $key => $field ) {
 			/* @var GF_Field $field */
-			if ( $field->displayOnly || in_array( $field->get_input_type(), array(
-					'fileupload',
-					'creditcard',
-				) )
-			) {
-				unset( $form['fields'][ $key ] );
+			if ( $field->displayOnly || in_array( $field->get_input_type(), $ignore_types ) ) {
+				$keys_to_unset[] = $key;
 			} else {
 				$total_fields ++;
 				if ( $field->isRequired ) {
@@ -504,19 +522,26 @@ class GF_Partial_Entries extends GFFeedAddOn {
 			}
 		}
 
-		$form['fields'] = array_values( $form['fields'] );
-
 		if ( $total_fields == 0 ) {
 			return false;
 		}
 
-		GFFormDisplay::validate( $form, array(), $page_number, $page_number );
+		if ( rgpost( 'action' ) == 'heartbeat' ) {
+			$this->log_debug( __METHOD__ . '(): is heartbeat; running GFFormDisplay::validate().' );
+			$page_number = GFFormDisplay::get_source_page( $form['id'] );
+			GFFormDisplay::validate( $form, array(), $page_number, $page_number );
+		}
 
-		$entry = GFFormsModel::create_lead( $form );
+		foreach ( $unset_keys as $key ) {
+			unset( $form['fields'][ $key ] );
+		}
+
+		$form['fields'] = array_values( $form['fields'] );
+		$entry          = GFFormsModel::create_lead( $form );
 
 		foreach ( $form['fields'] as $field ) {
 
-			if ( $field->isRequired && GFFormDisplay::is_empty( $field, $form['id'] ) ) {
+			if ( $field->isRequired && $field->is_value_submission_empty( $form_id ) ) {
 				continue;
 			}
 			/* @var GF_Field $field */
@@ -580,6 +605,16 @@ class GF_Partial_Entries extends GFFeedAddOn {
 			$entry['date_saved']   = $saved_entry_details['date_created'];
 		}
 
+		$entry_meta = GFFormsModel::get_entry_meta( $form_id );
+		if ( is_array( $entry_meta ) ) {
+			$keys_to_skip = array( 'required_fields_percent_complete', 'partial_entry_percent' );
+			foreach ( $entry_meta as $key => $item ) {
+				if ( ! in_array( $key, $keys_to_skip ) && isset( $item['update_entry_meta_callback'] ) ) {
+					$entry[ $key ] = call_user_func_array( $item['update_entry_meta_callback'], array( $key, $entry, $form ) );
+				}
+			}
+		}
+
 		return $entry;
 
 	}
@@ -626,7 +661,7 @@ class GF_Partial_Entries extends GFFeedAddOn {
 	}
 
 	/**
-	 * Target for the gform_entry_id_pre_save_lead filter. If a partial entry exist use its ID and delete partial entry meta.
+	 * Target for the gform_entry_id_pre_save_lead filter. If a partial entry exists use its ID and delete partial entry meta.
 	 *
 	 * @param $entry_id
 	 * @param $form
@@ -643,10 +678,13 @@ class GF_Partial_Entries extends GFFeedAddOn {
 					array( 'key' => 'partial_entry_id', 'value' => $partial_entry_id ),
 				),
 			);
-			$entries         = GFAPI::get_entries( $form['id'], $search_criteria );
+
+			$entries = GFAPI::get_entries( $form['id'], $search_criteria );
 			if ( count( $entries ) > 0 ) {
 				$entry    = $entries[0];
 				$entry_id = absint( $entry['id'] );
+				$result = GFAPI::update_entry( array( 'id' => $entry_id ) );
+				$this->log_debug( __METHOD__ . '() update result: ' . print_r( $result, true ) );
 				gform_delete_meta( $entry_id, 'partial_entry_id' );
 				gform_delete_meta( $entry_id, 'date_saved' );
 				gform_delete_meta( $entry_id, 'resume_url' );
