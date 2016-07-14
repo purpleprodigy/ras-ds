@@ -41,7 +41,9 @@
 								<li class="mar-b-1"><i
 										class="fa-li fa fa-file-text-o c-mid-gray"></i><?php echo do_shortcode( '[gravityview id=\'227\']' );?>
 								</li>
+								<li>Please note that Saved (Incomplete RAS-DS) results can take 10-15 minutes to show up here.</li>
 							</ul>
+
 							<h3 class="mar-0 mar-b-2">Completed RAS-DS</h3>
 							<ul class="list-icon fa-ul mar-b-4">
 								<li class="mar-b-1"><i
