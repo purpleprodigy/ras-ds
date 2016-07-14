@@ -196,27 +196,27 @@ class ChartData {
 	 * @return array Array of raw data.
 	 */
 	protected function get_dual_raw_data( $entry_a, $entry_b ) {
-		$segment1 = $entry_a['1'];
-		$segment2 = $entry_b['1'];
+		$segment1 = $entry_b['1'];
+		$segment2 = $entry_a['1'];
 
 		$data['segments'] = [ $segment1, $segment2 ];
 
 		$data['results'] = [
 			'Doing Things I Value'     => [
-				$segment1 => $entry_a[90],
-				$segment2 => $entry_b[90],
+				$segment1 => $entry_b[90],
+				$segment2 => $entry_a[90],
 			],
 			'Looking Forward'          => [
-				$segment1 => $entry_a[91],
-				$segment2 => $entry_b[91],
+				$segment1 => $entry_b[91],
+				$segment2 => $entry_a[91],
 			],
 			'Mastering My Illness'     => [
-				$segment1 => $entry_a[92],
-				$segment2 => $entry_b[92],
+				$segment1 => $entry_b[92],
+				$segment2 => $entry_a[92],
 			],
 			'Connecting And Belonging' => [
-				$segment1 => $entry_a[93],
-				$segment2 => $entry_b[93],
+				$segment1 => $entry_b[93],
+				$segment2 => $entry_a[93],
 			],
 		];
 

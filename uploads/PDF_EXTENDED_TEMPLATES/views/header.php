@@ -1,7 +1,7 @@
 <?php if ( isset( $comparison_lead ) ) { ?>
 <h2 class="mar-0 mar-b-4 text-9">
 	Compare RAS-DS Results: <br/>
-	<span class="text-regular c-gray">{test-title:1}</span> vs <span class="text-regular c-gray"><?php echo esc_html( $comparison_lead[1] ); ?></span>
+	<span class="text-regular c-gray"><?php echo esc_html( $comparison_lead[1] ); ?></span> vs <span class="text-regular c-gray">{test-title:1}</span>
 </h2>
 <?php } else { ?>
 <h2 class="mar-0 mar-b-4 text-9">
